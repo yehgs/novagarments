@@ -1,6 +1,7 @@
 'use client';
 import { twMerge } from 'tailwind-merge';
 import Paragraph from './Paragragh';
+import Image from 'next/image';
 
 const ImageTextCard = ({
   cardClassName,
@@ -27,10 +28,17 @@ const ImageTextCard = ({
 }) => {
   return (
     <div
-      className={`flex flex-col  gap-4 md:gap-8 ${cardClassName}`}
+      className={`flex flex-col gap-4 md:gap-8 ${cardClassName}`}
       style={{ backgroundColor: `${cardBgColor}` }}
     >
-      <img src={path} alt="section image" className={imgClassName} />
+      <Image
+        src={path}
+        alt="section image"
+        className={imgClassName}
+        width={500}
+        height={300}
+        layout="responsive"
+      />
       <h1 className={titleClassName}>{title}</h1>
       {text && (
         <Paragraph

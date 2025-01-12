@@ -3,7 +3,7 @@ import ServiceSection from '@/components/sections/service/ServiceSection';
 
 const Service = () => {
   return (
-    <div className="relative z-0 w-[100vw]">
+    <div className="relative z-0 w-full">
       <ServiceHero />
       <ServiceSection />
     </div>

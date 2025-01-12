@@ -38,12 +38,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <StairEffect />
-        <PageTransition>
-          <NavBar />
-          <div className="mt-[10vh] lg:mt-[100px]">{children}</div>
-          <Footer />
-        </PageTransition>
+        <div className="min-h-screen flex flex-col">
+          <StairEffect />
+          <PageTransition>
+            <NavBar />
+            <div className="flex-grow mt-[10vh] lg:mt-[100px]">{children}</div>
+            <Footer />
+          </PageTransition>
+        </div>
       </body>
     </html>
   );
