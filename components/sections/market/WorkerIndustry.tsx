@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
-import Certificates from '../home/Certificates';
 import FashionBrand from './FashionBrand';
 
 const WorkerIndustry = () => {

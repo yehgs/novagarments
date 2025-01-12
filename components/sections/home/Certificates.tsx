@@ -1,5 +1,4 @@
 import MarqueeCard from '@/components/MarqueeCard';
-import Marquee from 'react-fast-marquee';
 
 const Certificates = () => {
   const images = [

@@ -33,9 +33,9 @@ const FashionProduction = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="lg:text-2xl text-base text-center md:text-left"
           >
-            Brands in men's, women's, and children's fashion, underwear,
-            textiles, and household sponges, from importer to large retailers,
-            seeking efficient and customized solutions.
+            Brands in men&apos;s, women&apos;s, and children&apos;s fashion,
+            underwear, textiles, and household sponges, from importer to large
+            retailers, seeking efficient and customized solutions.
           </motion.p>
           <motion.span
             variants={textVariants}

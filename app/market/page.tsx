@@ -1,4 +1,3 @@
-import Certificates from '@/components/sections/home/Certificates';
 import FashionProduction from '@/components/sections/market/FashionProduction';
 import PromotionalWear from '@/components/sections/market/PromotionalWear';
 import SportWear from '@/components/sections/market/SportWear';

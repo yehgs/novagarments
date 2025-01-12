@@ -5,14 +5,12 @@ import { X, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import RequestQuoteBtn from '@/components/RequestQuoteBtn';
-import Image from 'next/image';
-import { div } from 'framer-motion/client';
 
 interface LinkProps {
-  href?: string;
+  path?: string;
 }
 
-const NavBar: React.FC<LinkProps> = ({ href }) => {
+const NavBar: React.FC<LinkProps> = ({ path }) => {
   const pathname = usePathname();
   const [menu, setMenu] = useState(false);
   const links = [

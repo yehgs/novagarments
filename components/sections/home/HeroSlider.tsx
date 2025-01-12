@@ -59,7 +59,7 @@ const FullScreenSlider: React.FC = () => {
               animate={activeIndex === 0 ? 'visible' : 'hidden'}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Let's get your your international ambitions!
+              Let&lsquo;s get your your international ambitions!
             </motion.p>
           </div>
         </div>
