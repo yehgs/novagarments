@@ -37,7 +37,7 @@ const ProductionCard = ({
         }}
       >
         <h1
-          className="lg:text-h2 text-xl leading-none font-semibold"
+          className="lg:text-h3 text-xl leading-none font-semibold"
           style={{ color: `${textColor}` }}
         >
           {text}

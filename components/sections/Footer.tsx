@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-secondary">
-        <div className="text-white flex flex-col md:flex-row justify-between items-center py-6 lg:text-xl text-base capitalize container">
+        <div className="text-white flex flex-col md:flex-row justify-between items-center py-6 lg:text-xl md:text-base capitalize container text-sm">
           <ul>
             <li className="flex gap-12">
               {footerLink3.map((item, index) => (
