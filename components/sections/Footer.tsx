@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import HeaderText from '../HeaderText';
 import Link from 'next/link';
 

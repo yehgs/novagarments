@@ -6,11 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import RequestQuoteBtn from '@/components/RequestQuoteBtn';
 
-interface LinkProps {
-  path?: string;
-}
-
-const NavBar: React.FC<LinkProps> = ({ path }) => {
+const NavBar: React.FC = () => {
   const pathname = usePathname();
   const [menu, setMenu] = useState(false);
   const links = [
@@ -45,7 +41,7 @@ const NavBar: React.FC<LinkProps> = ({ path }) => {
   };
 
   return (
-    <section className="md:shadow-none z-30 h-[10vh] lg:h-[100px] w-[100vw] fixed top-0   bg-primary ">
+    <section className="md:shadow-none z-30 h-[10vh] lg:h-[100px] w-[100vw] fixed top-0 bg-primary ">
       {/* DESKTOP */}
       <div className="hidden lg:block animate-in fade-in zoom-in text-white container bg-primary w-full h-full">
         <div className="flex justify-between items-center w-full">

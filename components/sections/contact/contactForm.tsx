@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { Country, State, City } from 'country-state-city';
+import { Country } from 'country-state-city';
 import emailjs from 'emailjs-com';
 import { Toaster, toast } from 'react-hot-toast';
 import Confetti from 'react-confetti';
@@ -21,8 +21,6 @@ const ContactForm: React.FC = () => {
     role: '',
     companyName: '',
     nationality: null as Option | null,
-    state: null as Option | null,
-    city: null as Option | null,
     address: '',
     phone: '',
     email: '',
@@ -30,8 +28,6 @@ const ContactForm: React.FC = () => {
   });
 
   const [isCelebrating, setIsCelebrating] = useState(false);
-  const [states, setStates] = useState<Option[]>([]);
-  const [cities, setCities] = useState<Option[]>([]);
 
   // Convert raw data to react-select options
   const convertToOptions = (
@@ -54,36 +50,7 @@ const ContactForm: React.FC = () => {
     setFormData({
       ...formData,
       nationality: selectedOption,
-      state: null,
-      city: null,
     });
-
-    if (selectedOption) {
-      const statesData = State.getStatesOfCountry(selectedOption.value);
-      setStates(convertToOptions(statesData, 'name', 'isoCode'));
-      setCities([]); // Reset cities
-    } else {
-      setStates([]);
-      setCities([]);
-    }
-  };
-
-  const handleStateChange = (selectedOption: Option | null) => {
-    setFormData({ ...formData, state: selectedOption, city: null });
-
-    if (selectedOption && formData.nationality) {
-      const citiesData = City.getCitiesOfState(
-        formData.nationality.value,
-        selectedOption.value
-      );
-      setCities(convertToOptions(citiesData, 'name', 'name'));
-    } else {
-      setCities([]);
-    }
-  };
-
-  const handleCityChange = (selectedOption: Option | null) => {
-    setFormData({ ...formData, city: selectedOption });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -108,8 +75,6 @@ const ContactForm: React.FC = () => {
           role: formData.role,
           companyName: formData.companyName,
           nationality: formData.nationality?.label || 'N/A',
-          state: formData.state?.label || 'N/A',
-          city: formData.city?.label || 'N/A',
           address: formData.address,
           phone: formData.phone,
           email: formData.email,
@@ -130,15 +95,11 @@ const ContactForm: React.FC = () => {
           role: '',
           companyName: '',
           nationality: null,
-          state: null,
-          city: null,
           address: '',
           phone: '',
           email: '',
           message: '',
         });
-        setStates([]);
-        setCities([]);
       } else {
         throw new Error('Failed to send the message.');
       }
@@ -185,31 +146,6 @@ const ContactForm: React.FC = () => {
           />
         </div>
 
-        {/* <div className="mb-4">
-          <label htmlFor="state" className="block text-sm font-medium">
-            State
-          </label>
-          <DynamicSelect
-            id="state"
-            options={states}
-            value={formData.state}
-            onChange={handleStateChange}
-            isDisabled={!states.length}
-          />
-        </div> */}
-
-        {/* <div className="mb-4">
-          <label htmlFor="city" className="block text-sm font-medium">
-            City
-          </label>
-          <DynamicSelect
-            id="city"
-            options={cities}
-            value={formData.city}
-            onChange={handleCityChange}
-            isDisabled={!cities.length}
-          />
-        </div> */}
         <div className="mb-4">
           <label htmlFor="address" className="block text-sm font-medium">
             Address
