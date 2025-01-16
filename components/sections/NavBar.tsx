@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
         <div className="hidden lg:flex items-center justify-between container mx-auto h-full text-white">
           <Link href="/">
             <Image
-              src="/images/logo.svg"
+              src="/logo-transparent.png"
               alt="Logo"
               width={150}
               height={100}
@@ -58,7 +58,7 @@ const NavBar: React.FC = () => {
             <div className="flex items-center justify-between mx-4 py-2">
               <Link href="/">
                 <Image
-                  src="/images/logo.svg"
+                  src="/logo-transparent.png"
                   alt="Logo"
                   width={80}
                   height={80}

@@ -5,6 +5,7 @@ import NavBar from '@/components/sections/NavBar';
 import Footer from '@/components/sections/Footer';
 import StairEffect from '@/components/StairEffect';
 import PageTransition from '@/components/PageTransition';
+import WhatsAppChat from '@/components/WhatsAppChat';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -44,6 +45,7 @@ export default function RootLayout({
             <NavBar />
             <div className="flex-grow mt-[10vh] lg:mt-[100px]">{children}</div>
             <Footer />
+            <WhatsAppChat />
           </PageTransition>
         </div>
       </body>

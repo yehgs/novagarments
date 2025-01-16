@@ -15,9 +15,9 @@ const ContactSection = () => {
   return (
     <div
       ref={ref}
-      className="w-full bg-[#e8e8e8] xl:h-[60vh] lg:h-[80vh] 2xl:h-[40vh] flex flex-col justify-center items-center"
+      className="relative w-full bg-[#e8e8e8] flex flex-col justify-center items-center"
     >
-      <div className="container flex flex-col justify-center items-center lg:gap-14 gap-8 py-12 px-14 text-center h-full">
+      <div className="container flex flex-col justify-center items-center lg:gap-14 gap-4 py-16 px-14 text-center">
         <motion.h1
           variants={textVariants}
           initial="hidden"

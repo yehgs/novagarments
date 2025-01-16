@@ -13,12 +13,12 @@ const Footer = () => {
   const footerLink2 = [
     { name: 'About Us', path: '/about' },
     { name: 'FAQ', path: '/faq' },
-    { name: 'Policy', path: '/policy' },
+    { name: 'Policy & Privacy', path: '/policy' },
     { name: 'Our Terms', path: '/terms' },
   ];
   const footerLink3 = [
-    { name: 'Policy', path: '/policy' },
-    { name: 'cookie', path: '/cookie' },
+    { name: 'POLICY & PRIVACY', path: '/policy' },
+    { name: 'FAQ', path: '/faq' },
     { name: 'our terms', path: '/terms' },
   ];
 
@@ -27,7 +27,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 justify-between items-start container py-12 w-full">
         <div className="col-span-1 lg:col-span-2 flex flex-col items-start gap-10">
           <Image
-            src="/images/logo.svg"
+            src="/logo-transparent.png"
             alt="logo"
             width={268}
             height={1880}
