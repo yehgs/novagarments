@@ -1,6 +1,7 @@
 import FashionProduction from '@/components/sections/market/FashionProduction';
 import PromotionalWear from '@/components/sections/market/PromotionalWear';
 import SportWear from '@/components/sections/market/SportWear';
+import UnderWear from '@/components/sections/market/UnderWear';
 import WhyChooseUs from '@/components/sections/market/WhyChooseUs';
 import WorkerIndustry from '@/components/sections/market/WorkerIndustry';
 import React from 'react';
@@ -13,6 +14,7 @@ const Market = () => {
       <WorkerIndustry />
       <PromotionalWear />
       <SportWear />
+      <UnderWear />
     </div>
   );
 };

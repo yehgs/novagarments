@@ -14,12 +14,12 @@ const Footer = () => {
     { name: 'About Us', path: '/about' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Policy & Privacy', path: '/policy' },
-    { name: 'Our Terms', path: '/terms' },
+    { name: 'Terms and Conditions', path: '/terms' },
   ];
   const footerLink3 = [
     { name: 'POLICY & PRIVACY', path: '/policy' },
     { name: 'FAQ', path: '/faq' },
-    { name: 'our terms', path: '/terms' },
+    { name: 'Terms and Conditions', path: '/terms' },
   ];
 
   return (

@@ -16,24 +16,24 @@ const AboutImageCards = () => {
         'House#-16 (Level-4), Avenue#9, Block#C1,Sector-15,Uttara, Dhaka-1230, Bangladesh.',
     },
     {
-      path: '/images/pic23.jpg',
+      path: '/images/pic25.jpg',
       title: 'Pakistan Office',
       text2:
         'Lyallpur Galleria 2, Near4 Season Housing, Samudari Road, Faisalabad Pakistan',
     },
     {
-      path: '/images/pic24.jpg',
+      path: '/images/pic23.jpg',
       title: 'Netherlands Logistic',
       text2: 'Fokkerweg 300 Gebouw 5 , 1438 AN Oude Meer The Netherland',
     },
     {
-      path: '/images/pic25.jpg',
+      path: '/images/pic26.jpg',
       title: 'UK Office',
       text2:
         'Luton Market, Unit A51, LU1 2TA Luton Hertfordshire. United Kingdom',
     },
     {
-      path: '/images/pic26.jpg',
+      path: '/images/pic24.jpg',
       title: 'Middle East Logistic',
       text2:
         'Jebel Ali ( Opposite Jafza-8) Street 402, Dubai United Arab Emirate, ',

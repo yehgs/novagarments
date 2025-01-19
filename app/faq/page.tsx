@@ -86,7 +86,7 @@ const faqData = [
       {
         question: 'Is a declaration required to initiate production?',
         answer:
-          'Yes, a declaration on the client&lsquo;s letterhead authorizing the production of the brand is required.',
+          'Yes, a declaration on the client’s letterhead authorizing the production of the brand is required.',
       },
       {
         question: 'When is an order considered confirmed?',
@@ -96,10 +96,10 @@ const faqData = [
       {
         question: 'Are there penalties for delays or non-compliance?',
         answer:
-          'No, delays due to force majeure (such as natural disasters, conflicts, disruptions, or other unforeseen circumstances beyond Nova Garment BV&lsquo;s control) do not incur penalties. Delivery times may be adjusted accordingly without liability.',
+          'No, delays due to force majeure (such as natural disasters, conflicts, disruptions, or other unforeseen circumstances beyond Nova Garment BV’s control) do not incur penalties. Delivery times may be adjusted accordingly without liability.',
       },
       {
-        question: 'How can I monitor my order&lsquo;s progress?',
+        question: 'How can I monitor my order’s progress?',
         answer:
           'Every order is monitored daily, and weekly reports are provided with updates on production progress and any emerging issues.',
       },
