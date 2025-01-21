@@ -2,9 +2,16 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
-import FashionBrand from './FashionBrand';
+import PromoBrand from './PromoBrand';
 
 const PromotionalWear = () => {
+  const logos = [
+    '/images/brands/promo/1.png',
+    '/images/brands/promo/2.png',
+    '/images/brands/promo/3.png',
+    '/images/brands/promo/4.png',
+    '/images/brands/promo/5.png',
+  ];
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -66,7 +73,7 @@ const PromotionalWear = () => {
           </motion.span>
         </div>
       </section>
-      <FashionBrand />
+      <PromoBrand />
     </div>
   );
 };

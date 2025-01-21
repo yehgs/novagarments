@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
-import FashionBrand from './FashionBrand';
+import SportswearBrands from './SportsWearBrands';
 
 const SportWear = () => {
   const [ref, inView] = useInView({
@@ -65,7 +65,7 @@ const SportWear = () => {
           </motion.span>
         </div>
       </section>
-      <FashionBrand />
+      <SportswearBrands />
     </div>
   );
 };

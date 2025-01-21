@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 import FashionBrand from './FashionBrand';
+import WorkWearBrand from './WorkWearBrand';
 
 const WorkerIndustry = () => {
   const [ref, inView] = useInView({
@@ -97,7 +98,7 @@ const WorkerIndustry = () => {
           ></div>
         </div>
       </section>
-      <FashionBrand />
+      <WorkWearBrand />
     </div>
   );
 };

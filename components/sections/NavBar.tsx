@@ -27,13 +27,13 @@ const NavBar: React.FC = () => {
       <nav className="fixed top-0 z-30 w-full bg-primary h-[10vh] lg:h-[100px]">
         {/* Desktop View */}
         <div className="hidden lg:flex items-center justify-between container mx-auto h-full text-white">
-          <Link href="/">
+          <Link href="/" className="h-[10vh] lg:h-[100px] w-auto">
             <Image
               src="/logo-transparent.png"
               alt="Logo"
               width={150}
               height={100}
-              className="h-[10vh] lg:h-[100px] w-auto"
+              className="h-full p-6 w-auto"
             />
           </Link>
           <div className="flex items-center gap-[20px] xl:gap-[50px] text-base xl:text-xl font-medium">
@@ -49,20 +49,38 @@ const NavBar: React.FC = () => {
               </Link>
             ))}
           </div>
-          <RequestQuoteBtn />
+          <div className="flex justify-center  gap-2 items-center">
+            <div className="flex justify-center  gap-2 items-center h-[25px]">
+              <Image
+                height={100}
+                width={150}
+                alt="Nigerian flag"
+                src="/images/nigeria.svg"
+                className="h-full w-auto"
+              />
+              <Image
+                height={100}
+                width={150}
+                alt="italian flag"
+                src="/images/italy.svg"
+                className="h-full w-auto"
+              />
+            </div>
+            <RequestQuoteBtn />
+          </div>
         </div>
 
         {/* Mobile View */}
         <div className="w-full">
           <div className="lg:hidden fixed top-0 w-[100vw] bg-primary text-white shadow-sm z-[999]">
             <div className="flex items-center justify-between mx-4 py-2">
-              <Link href="/">
+              <Link href="/" className="h-16 w-auto">
                 <Image
                   src="/logo-transparent.png"
                   alt="Logo"
-                  width={80}
-                  height={80}
-                  className="h-16 w-auto"
+                  width={150}
+                  height={100}
+                  className="h-full p-2 w-auto"
                 />
               </Link>
               <button
@@ -88,8 +106,22 @@ const NavBar: React.FC = () => {
                     {link.name}
                   </Link>
                 ))}
-                <div className="mt-4">
-                  <RequestQuoteBtn />
+                <RequestQuoteBtn />
+                <div className="flex justify-start gap-2 items-center h-[25px] mb-2">
+                  <Image
+                    height={100}
+                    width={150}
+                    alt="Nigerian flag"
+                    src="/images/nigeria.svg"
+                    className="h-full w-auto"
+                  />
+                  <Image
+                    height={100}
+                    width={150}
+                    alt="italian flag"
+                    src="/images/italy.svg"
+                    className="h-full w-auto"
+                  />
                 </div>
               </div>
             )}

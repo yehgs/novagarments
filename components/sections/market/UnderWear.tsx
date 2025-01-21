@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
-import UnderWearBrands from './UnderWearBrands';
+import FashionBrand from './FashionBrand';
 
 const UnderWear = () => {
   const [ref, inView] = useInView({
@@ -17,12 +17,12 @@ const UnderWear = () => {
     <div>
       <section
         ref={ref}
-        className="grid grid-cols-1 md:grid-cols-3 w-full mb-10"
+        className="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-7 w-full mb-10 xl:container"
       >
-        <div className="md:col-span-2 relative flex flex-col gap-6">
+        <div className="xl:col-span-2 md:col-span-4 relative flex flex-col gap-6">
           <div className="flex">
             <div className="flex justify-start items-center w-[50%]">
-              <h1 className="text-right lg:text-h2 text-2xl font-bold mt-14 leading-3 px-11">
+              <h1 className="text-right lg:text-4xl text-2xl font-bold mt-14 leading-3 px-11">
                 Underwear <br />
                 <span className="text-xl">men</span>
               </h1>
@@ -36,12 +36,12 @@ const UnderWear = () => {
               }}
             ></div>
           </div>
-          <h2 className="absolute md:text-xl text-xs font-semibold top-[45%] left-[5%]">
+          <h2 className="absolute md:text-lg text-xs font-semibold top-[45%] left-[5%]">
             High-quality, tailored to <br /> your needs.
           </h2>
           <div className="flex">
             <div className="flex justify-start items-center  w-[50%]">
-              <h1 className="text-2xl text-right lg:text-h2 font-bold mt-14 leading-3 px-11">
+              <h1 className="text-2xl text-right xl:text-h2 lg:text-4xl font-bold mt-14 leading-3 px-11">
                 Beachwear
                 <br />
                 <span className="text-xl">men</span>
@@ -57,7 +57,7 @@ const UnderWear = () => {
             ></div>
           </div>
         </div>
-        <div className="col-span-1 flex flex-col justify-center w-full">
+        <div className="xl:col-span-1  md:col-span-3 flex flex-col justify-center w-full">
           <div className="flex flex-col justify-center gap-8 w-full p-10 lg:p-14">
             <motion.p
               variants={textVariants}
@@ -90,7 +90,7 @@ const UnderWear = () => {
           </div>
         </div>
       </section>
-      <UnderWearBrands />
+      <FashionBrand />
     </div>
   );
 };

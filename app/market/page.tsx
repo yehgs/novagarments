@@ -11,10 +11,10 @@ const Market = () => {
     <div className="relative z-0 w-[100vw] flex flex-col gap-28">
       <WhyChooseUs />
       <FashionProduction />
+      <UnderWear />
       <WorkerIndustry />
       <PromotionalWear />
       <SportWear />
-      <UnderWear />
     </div>
   );
 };
