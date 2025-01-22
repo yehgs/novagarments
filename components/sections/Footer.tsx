@@ -38,7 +38,7 @@ const Footer = () => {
             className="md:text-2xl lg:text-3xl md:max-w-md text-xl max-w-xs"
           />
         </div>
-        <div className="col-span-1 flex flex-col justify-between text-white lg:text-2xl text-base font-semibold gap-4 lg:gap-6 mt-20">
+        <div className="col-span-1 flex flex-col justify-between text-white lg:text-xl text-base font-semibold gap-4 lg:gap-6 mt-20">
           {footerLink1.map((item, index) => (
             <Link
               key={index}
@@ -49,7 +49,7 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div className="col-span-1 flex flex-col justify-between text-white lg:text-2xl text-base font-semibold gap-4 lg:gap-6 mt-20">
+        <div className="col-span-1 flex flex-col justify-between text-white lg:text-xl text-base font-semibold gap-4 lg:gap-6 mt-20">
           {footerLink2.map((item, index) => (
             <Link
               key={index}
@@ -61,12 +61,12 @@ const Footer = () => {
           ))}
         </div>
         <div className="col-span-1 flex flex-col mt-20 gap-4 lg:gap-6 text-white">
-          <h1 className="lg:text-2xl text-base font-semibold">Contact</h1>
-          <p className="lg:text-2xl text-base font-light">
+          <h1 className="lg:text-xl text-base font-semibold">Contact</h1>
+          <p className="lg:text-xl text-base font-light">
             John M Keynesplein, <br /> 1 - 1066EP,
             <br /> Amsterdam, Netherlands.
           </p>
-          <div className="lg:text-xl text-base font-light">
+          <div className="text-base font-light">
             <a
               href="mailto:info@novagarments.com"
               className="hover:text-accent hover:font-normal transition-all duration-300"
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-secondary">
-        <div className="text-white flex flex-col md:flex-row justify-between items-center py-6 lg:text-xl md:text-base capitalize container text-sm">
+        <div className="text-white flex flex-col md:flex-row justify-between items-center py-6 lg:text-xs md:text-base capitalize container text-sm">
           <ul>
             <li className="flex gap-12">
               {footerLink3.map((item, index) => (

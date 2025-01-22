@@ -9,7 +9,7 @@ const AboutHero = () => {
   return (
     <div className="w-full flex flex-col md:flex-row container">
       <div
-        className="md:w-1/2 w-full h-[90vh] hidden md:block md:order-1 order-2 2xl:h-[60vh] 3xl:h-[30vh]"
+        className="md:w-1/2 w-full h-[90vh] hidden md:block md:order-1 order-2 lg:h-[55vh] 2xl:h-[60vh] 3xl:h-[30vh]"
         style={{
           backgroundImage: `url('/images/pic27.jpg')`,
           backgroundSize: 'cover',

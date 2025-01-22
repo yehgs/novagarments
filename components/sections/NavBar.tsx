@@ -6,10 +6,27 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import RequestQuoteBtn from '@/components/RequestQuoteBtn';
 import Image from 'next/image';
+import {
+  Listbox,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions,
+} from '@headlessui/react';
+
+interface LanguageOption {
+  label: string;
+  value: string;
+  flag: string;
+}
 
 const NavBar: React.FC = () => {
   const pathname = usePathname();
   const [menu, setMenu] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<LanguageOption>({
+    label: 'UK',
+    value: 'uk',
+    flag: '/images/uk.svg',
+  });
 
   const links = [
     { name: 'Home', path: '/' },
@@ -17,7 +34,11 @@ const NavBar: React.FC = () => {
     { name: 'Market', path: '/market' },
     { name: 'Support', path: '/support' },
     { name: 'About Us', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+  ];
+
+  const languageOptions: LanguageOption[] = [
+    { label: 'UK', value: 'uk', flag: '/images/uk.svg' },
+    { label: 'Italy', value: 'it', flag: '/images/italy.svg' },
   ];
 
   const toggleMenu = () => setMenu((prev) => !prev);
@@ -49,23 +70,44 @@ const NavBar: React.FC = () => {
               </Link>
             ))}
           </div>
-          <div className="flex justify-center  gap-2 items-center">
-            <div className="flex justify-center  gap-2 items-center h-[25px]">
-              <Image
-                height={100}
-                width={150}
-                alt="Nigerian flag"
-                src="/images/nigeria.svg"
-                className="h-full w-auto"
-              />
-              <Image
-                height={100}
-                width={150}
-                alt="italian flag"
-                src="/images/italy.svg"
-                className="h-full w-auto"
-              />
-            </div>
+          <div className="flex items-center gap-4">
+            {/* Language Dropdown */}
+            <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
+              <div className="relative">
+                <ListboxButton className="flex items-center gap-2">
+                  <Image
+                    src={selectedLanguage.flag}
+                    alt={selectedLanguage.label}
+                    width={20}
+                    height={20}
+                    className="h-5 w-5"
+                  />
+                  <span className="text-sm font-medium">
+                    {selectedLanguage.label}
+                  </span>
+                </ListboxButton>
+                <ListboxOptions className="absolute mt-2 w-40 bg-white rounded-md shadow-lg py-1 z-50">
+                  {languageOptions.map((language) => (
+                    <ListboxOption
+                      key={language.value}
+                      value={language}
+                      className="cursor-pointer px-4 py-2 text-sm data-[focus]:bg-blue-100 text-black hover:bg-blue-100"
+                    >
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src={language.flag}
+                          alt={language.label}
+                          width={20}
+                          height={20}
+                          className="h-5 w-5"
+                        />
+                        <span>{language.label}</span>
+                      </div>
+                    </ListboxOption>
+                  ))}
+                </ListboxOptions>
+              </div>
+            </Listbox>
             <RequestQuoteBtn />
           </div>
         </div>
@@ -101,28 +143,53 @@ const NavBar: React.FC = () => {
                     className={`transition-all duration-300 ${
                       link.path === pathname ? 'text-accent' : 'text-gray'
                     } hover:text-accent`}
-                    onClick={toggleMenu} // Close menu on link click
+                    onClick={toggleMenu}
                   >
                     {link.name}
                   </Link>
                 ))}
-                <RequestQuoteBtn />
-                <div className="flex justify-start gap-2 items-center h-[25px] mb-2">
-                  <Image
-                    height={100}
-                    width={150}
-                    alt="Nigerian flag"
-                    src="/images/nigeria.svg"
-                    className="h-full w-auto"
-                  />
-                  <Image
-                    height={100}
-                    width={150}
-                    alt="italian flag"
-                    src="/images/italy.svg"
-                    className="h-full w-auto"
-                  />
+                <div className="flex items-center gap-4">
+                  <Listbox
+                    value={selectedLanguage}
+                    onChange={setSelectedLanguage}
+                  >
+                    <div className="relative">
+                      <ListboxButton className="flex items-center gap-2">
+                        <Image
+                          src={selectedLanguage.flag}
+                          alt={selectedLanguage.label}
+                          width={20}
+                          height={20}
+                          className="h-5 w-5"
+                        />
+                        <span className="text-sm font-medium">
+                          {selectedLanguage.label}
+                        </span>
+                      </ListboxButton>
+                      <ListboxOptions className="absolute mt-2 w-40 bg-white rounded-md shadow-lg py-1 z-50">
+                        {languageOptions.map((language) => (
+                          <ListboxOption
+                            key={language.value}
+                            value={language}
+                            className="cursor-pointer px-4 py-2 text-sm data-[focus]:bg-blue-100 text-black"
+                          >
+                            <div className="flex items-center gap-2">
+                              <Image
+                                src={language.flag}
+                                alt={language.label}
+                                width={20}
+                                height={20}
+                                className="h-5 w-5"
+                              />
+                              <span>{language.label}</span>
+                            </div>
+                          </ListboxOption>
+                        ))}
+                      </ListboxOptions>
+                    </div>
+                  </Listbox>
                 </div>
+                <RequestQuoteBtn />
               </div>
             )}
           </div>

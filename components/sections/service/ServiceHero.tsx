@@ -9,7 +9,7 @@ const ServiceHero = () => {
         firstTextClassName=""
         secondTextClassName="md:text-7xl text-4xl italic font-bold max-w-md py-20 text-center md:text-left"
         firstText=""
-        secondText="Finance Production Logistics Delivery and Seamless Services."
+        secondText="Finance, Production, Logistic and Delivery Seamless."
       />
     </div>
   );

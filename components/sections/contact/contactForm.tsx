@@ -21,7 +21,7 @@ const ContactForm: React.FC = () => {
     role: '',
     companyName: '',
     nationality: null as Option | null,
-    garmentSector: null as Option | null,
+    garmentSector: [] as Option[],
     address: '',
     phone: '',
     email: '',
@@ -63,10 +63,13 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const handleSelectChange = (field: string, selectedOption: Option | null) => {
+  const handleSelectChange = (
+    field: string,
+    selectedOptions: Option[] | null
+  ) => {
     setFormData((prevState) => ({
       ...prevState,
-      [field]: selectedOption,
+      [field]: selectedOptions || [],
     }));
   };
 
@@ -94,7 +97,9 @@ const ContactForm: React.FC = () => {
           role: formData.role,
           companyName: formData.companyName,
           nationality: formData.nationality?.label || 'N/A',
-          garmentSector: formData.garmentSector?.label || 'N/A',
+          garmentSector: formData.garmentSector
+            .map((sector) => sector.label)
+            .join(', '),
           address: formData.address,
           phone: formData.phone,
           email: formData.email,
@@ -115,7 +120,7 @@ const ContactForm: React.FC = () => {
           role: '',
           companyName: '',
           nationality: null,
-          garmentSector: null,
+          garmentSector: [],
           address: '',
           phone: '',
           email: '',
@@ -187,6 +192,7 @@ const ContactForm: React.FC = () => {
           </label>
           <DynamicSelect
             id="garmentSector"
+            isMulti
             options={convertToOptions([
               'Fashion',
               'Underwear',
@@ -195,9 +201,9 @@ const ContactForm: React.FC = () => {
               'Promo Wear',
               'Workwear',
             ])}
-            value={formData.garmentSector || null}
+            value={formData.garmentSector}
             onChange={(newValue) =>
-              handleSelectChange('garmentSector', newValue as Option | null)
+              handleSelectChange('garmentSector', newValue as Option[])
             }
           />
         </div>

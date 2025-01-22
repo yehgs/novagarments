@@ -258,7 +258,7 @@ const FAQPage = () => {
         <div key={index} className="mb-6 border-b border-gray-300">
           <button
             onClick={() => toggleCategory(section.category)}
-            className="w-full text-left text-xl font-semibold py-4 px-2 text-gray-800 bg-gray-100 hover:bg-gray-200 transition-all"
+            className="w-full text-left text-xl font-bold py-4 px-2 text-gray-800 bg-gray-100 hover:bg-gray-200 transition-all"
           >
             {section.category}
           </button>
