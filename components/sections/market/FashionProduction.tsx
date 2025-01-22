@@ -61,7 +61,7 @@ const FashionProduction = () => {
           }}
         ></div>
       </section>
-      <FashionBrand />
+      {/* <FashionBrand /> */}
     </div>
   );
 };
