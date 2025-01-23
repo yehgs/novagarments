@@ -179,10 +179,10 @@ const PrivacyPolicy = () => {
         </p>
         <address className="not-italic text-gray-700">
           <strong>Nova Garment BV </strong> <br />
-          Joop Geesinkweg <br /> 722,111 AB,
-          <br /> Amsterdam Netherlands.
+          John M Keynesplein, <br /> 1 - 1066EP,
+          <br /> Amsterdam, Netherlands.
           <br />
-          Email:{' '}
+          Email:
           <a
             href="mailto:info@novagarments.com"
             className="text-blue-600 underline"
