@@ -40,7 +40,7 @@ const AboutImageCards = () => {
     },
   ];
   return (
-    <div className="container grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-8 w-full py-20 px-16">
+    <div className="container grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-2 w-full py-12 px-10">
       {content.map((item, index) => {
         return (
           <ImageTextCard

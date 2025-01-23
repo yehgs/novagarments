@@ -73,7 +73,7 @@ const UnderWear = () => {
               listen to your requests and transform them into unique products
               that combine comfort, style, and excellence.
             </motion.p>
-            <motion.span
+            {/* <motion.span
               variants={textVariants}
               initial="hidden"
               animate={inView ? 'visible' : 'hidden'}
@@ -86,7 +86,7 @@ const UnderWear = () => {
               >
                 Contact Us
               </Link>
-            </motion.span>
+            </motion.span> */}
           </div>
         </div>
       </section>

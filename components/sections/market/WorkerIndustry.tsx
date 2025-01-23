@@ -48,7 +48,7 @@ const WorkerIndustry = () => {
               Clothing
             </li>
           </motion.ul>
-          <motion.span
+          {/* <motion.span
             variants={textVariants}
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
@@ -61,7 +61,7 @@ const WorkerIndustry = () => {
             >
               Contact Us
             </Link>
-          </motion.span>
+          </motion.span> */}
         </div>
         <div className="grid grid-cols-2 grid-rows-2 bg-primary p-6 w-full md:w-[55%] gap-3">
           <div

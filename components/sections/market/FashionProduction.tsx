@@ -37,7 +37,7 @@ const FashionProduction = () => {
             underwear, textiles, and household sponges, from importer to large
             retailers, seeking efficient and customized solutions.
           </motion.p>
-          <motion.span
+          {/* <motion.span
             variants={textVariants}
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
@@ -50,7 +50,7 @@ const FashionProduction = () => {
             >
               Contact Us
             </Link>
-          </motion.span>
+          </motion.span> */}
         </div>
         <div
           className="md:w-[55%] w-full h-[80vh] 3xl:h-[35vh]"

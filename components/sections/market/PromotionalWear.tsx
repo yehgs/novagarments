@@ -57,7 +57,7 @@ const PromotionalWear = () => {
             promotional campaigns, our garments are designed to represent your
             brand with distinction and quality.
           </motion.p>
-          <motion.span
+          {/* <motion.span
             variants={textVariants}
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
@@ -70,7 +70,7 @@ const PromotionalWear = () => {
             >
               Contact Us
             </Link>
-          </motion.span>
+          </motion.span> */}
         </div>
       </section>
       <PromoBrand />

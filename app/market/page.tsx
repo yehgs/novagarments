@@ -1,3 +1,4 @@
+import ContactSection from '@/components/sections/about/ContactSection';
 import FashionProduction from '@/components/sections/market/FashionProduction';
 import PromotionalWear from '@/components/sections/market/PromotionalWear';
 import SportWear from '@/components/sections/market/SportWear';
@@ -15,6 +16,7 @@ const Market = () => {
       <WorkerIndustry />
       <PromotionalWear />
       <SportWear />
+      <ContactSection />
     </div>
   );
 };

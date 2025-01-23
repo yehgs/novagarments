@@ -11,7 +11,7 @@ const Video = () => {
   };
 
   return (
-    <div className="relative h-full w-full flex items-center justify-center bg-black">
+    <div className="relative w-full max-w-[800px] aspect-video flex items-center justify-center bg-black">
       {isPlaying ? (
         <iframe
           className="absolute inset-0 w-full h-full"
@@ -24,16 +24,16 @@ const Video = () => {
       ) : (
         <>
           <div
-            className="absolute inset-0 w-full h-full bg-cover bg-center p-6"
+            className="absolute inset-0 w-full h-full bg-cover bg-center"
             style={{
               backgroundImage: `url('https://img.youtube.com/vi/61C76aUw8zk/maxresdefault.jpg')`,
             }}
           ></div>
           <button
             onClick={handlePlay}
-            className="relative z-10 flex items-center justify-center w-24 h-24 bg-white rounded-full group animate-pulse"
+            className="relative z-10 flex items-center justify-center w-16 h-16 md:w-24 md:h-24 bg-white rounded-full group animate-pulse"
           >
-            <Play className="h-12 w-12 text-primary group-hover:scale-110 transition-transform duration-300" />
+            <Play className="h-8 w-8 md:h-12 md:w-12 text-primary group-hover:scale-110 transition-transform duration-300" />
             <div className="absolute inset-0 w-full h-full animate-ping rounded-full bg-primary opacity-20"></div>
           </button>
         </>

@@ -5,8 +5,8 @@ import Image from 'next/image';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const footerLink1 = [
-    { name: 'Focus', path: '/focus' },
-    { name: 'Service', path: '/service' },
+    { name: 'Home', path: '/' },
+    { name: 'Service', path: '/services' },
     { name: 'Market', path: '/market' },
     { name: 'Support', path: '/support' },
   ];
@@ -69,7 +69,7 @@ const Footer = () => {
           <div className="text-base font-light">
             <a
               href="mailto:info@novagarments.com"
-              className="hover:text-accent hover:font-normal transition-all duration-300"
+              className="hover:text-accent hover:font-normal transition-all duration-300 lg:text-xl text-base"
             >
               info@novagarments.com
             </a>

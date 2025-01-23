@@ -49,7 +49,7 @@ const SportWear = () => {
             soccer to outdoor sports, our sportswear productions are made to
             support every movement and inspire every athlete.
           </motion.p>
-          <motion.span
+          {/* <motion.span
             variants={textVariants}
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
@@ -62,7 +62,7 @@ const SportWear = () => {
             >
               Contact Us
             </Link>
-          </motion.span>
+          </motion.span> */}
         </div>
       </section>
       <SportswearBrands />

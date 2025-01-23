@@ -31,14 +31,15 @@ const ImageTextCard = ({
       className={`flex flex-col gap-4 md:gap-8 ${cardClassName}`}
       style={{ backgroundColor: `${cardBgColor}` }}
     >
-      <Image
-        src={path}
-        alt="section image"
-        className={imgClassName}
-        width={500}
-        height={300}
-        layout="responsive"
-      />
+      {/* Define a container with fixed height/width */}
+      <div className="w-full h-[150px] md:h-[250px] relative overflow-hidden">
+        <Image
+          src={path}
+          alt="section image"
+          className={`object-cover w-full h-full ${imgClassName}`}
+          layout="fill"
+        />
+      </div>
       <h1 className={titleClassName}>{title}</h1>
       {text && (
         <Paragraph
