@@ -7,7 +7,7 @@ const AboutImageCards = () => {
     {
       path: '/images/pic21.jpg',
       title: 'Headquarters & Sales',
-      text2: ' John M Keynesplein, 1 - 1066EP, Amsterdam, The Netherlands.',
+      text2: ' John M Keynesplein, 1 1066EP Amsterdam, The Netherlands.',
     },
     {
       path: '/images/pic22.jpg',
