@@ -179,8 +179,10 @@ const PrivacyPolicy = () => {
         </p>
         <address className="not-italic text-gray-700">
           <strong>Nova Garment BV </strong> <br />
-          John M Keynesplein, <br /> 1 - 1066EP,
-          <br /> Amsterdam, Netherlands.
+          John M Keynesplein, 1
+          <br /> 1066EP Amsterdam,
+          <br />
+          The Netherlands.
           <br />
           Email:
           <a

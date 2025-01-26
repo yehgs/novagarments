@@ -63,8 +63,11 @@ const Footer = () => {
         <div className="col-span-1 flex flex-col mt-20 gap-4 lg:gap-6 text-white">
           <h1 className="lg:text-xl text-base font-semibold">Contact</h1>
           <p className="lg:text-xl text-base font-light">
-            John M Keynesplein, <br /> 1 - 1066EP,
-            <br /> Amsterdam, Netherlands.
+            John M Keynesplein, 1
+            <br /> 1066EP Amsterdam,
+            <br />
+            The Netherlands.
+            <br />
           </p>
           <div className="text-base font-light">
             <a
