@@ -1,7 +1,14 @@
 'use client';
 import { motion } from 'framer-motion';
+import useLanguageStore from '@/store/useLanguageStore';
+import { aboutPageTranslate } from '@/app/utils/translate';
+import { useEffect } from 'react';
 
 const AboutHero = () => {
+  const { translation, detectUserLanguage } = useLanguageStore();
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
@@ -25,13 +32,11 @@ const AboutHero = () => {
           className="xl:text-2xl text-base "
         >
           <span className="xl:text-2xl text-base  font-semibold">
-            Nova Garments Group
+            {aboutPageTranslate.aboutHeroSection[translation]?.boldtxt1 ||
+              aboutPageTranslate.aboutHeroSection.uk.boldtxt1}
           </span>
-          , based in Amsterdam, is your trusted partner for international
-          production management. Strategically located near the port of
-          Rotterdam and Schiphol International Airport, we offer innovative
-          solutions for companies that want to expand globally without
-          complications.
+          {aboutPageTranslate.aboutHeroSection[translation]?.text1 ||
+            aboutPageTranslate.aboutHeroSection.uk.text1}
         </motion.p>
         <motion.p
           variants={textVariants}
@@ -40,12 +45,15 @@ const AboutHero = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="xl:text-2xl text-base "
         >
-          With an established network of strategic partners in{' '}
-          <strong>Bangladesh and Pakistan</strong>, we simplify every aspect of
-          the production process-from financial management to logistics to
-          customs clearance. Thanks to our local agents and our widespread
-          presence throughout Europe, we guarantee constant, personalized and
-          reliable support.
+          {aboutPageTranslate.aboutHeroSection[translation]?.text2 ||
+            aboutPageTranslate.aboutHeroSection.uk.text2}{' '}
+          <strong>
+            {' '}
+            {aboutPageTranslate.aboutHeroSection[translation]?.boldtxt2 ||
+              aboutPageTranslate.aboutHeroSection.uk.boldtxt2}
+          </strong>
+          {aboutPageTranslate.aboutHeroSection[translation]?.text3 ||
+            aboutPageTranslate.aboutHeroSection.uk.text3}
         </motion.p>
       </div>
     </div>

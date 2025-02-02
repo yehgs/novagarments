@@ -1,12 +1,19 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import useLanguageStore from '@/store/useLanguageStore';
+import { supportPageTranslate } from '@/app/utils/translate';
+import { useEffect } from 'react';
 
 const Logistics = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
+  const { translation, detectUserLanguage } = useLanguageStore();
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
@@ -23,7 +30,8 @@ const Logistics = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="lg:text-h2 text-h3 font-semibold leading-none"
             >
-              Integrated Logistics and Dedicated Deliveries.
+              {supportPageTranslate.logisticsSection[translation]?.title ||
+                supportPageTranslate.logisticsSection.uk.title}
             </motion.h1>
             <motion.div
               variants={textVariants}
@@ -33,23 +41,44 @@ const Logistics = () => {
               className="flex flex-col gap-4"
             >
               <p>
-                <strong>Europe-wide FCL/LCL delivery within 48 hours: </strong>
-                We offer fast transit times for full shipments (Full Container
-                Load or Groupage).
+                <strong>
+                  {supportPageTranslate.logisticsSection[translation]
+                    ?.header1 ||
+                    supportPageTranslate.logisticsSection.uk.header1}
+                </strong>
+                {supportPageTranslate.logisticsSection[translation]
+                  ?.subheader1 ||
+                  supportPageTranslate.logisticsSection.uk.subheader1}
               </p>
               <p>
-                <strong>Organized Widespread Distribution: </strong>
-                We can handle deliveries from single packages to large-scale
-                distributions.
+                <strong>
+                  {supportPageTranslate.logisticsSection[translation]
+                    ?.header2 ||
+                    supportPageTranslate.logisticsSection.uk.header2}
+                </strong>
+                {supportPageTranslate.logisticsSection[translation]
+                  ?.subheader2 ||
+                  supportPageTranslate.logisticsSection.uk.subheader2}
               </p>
               <p>
-                <strong>Direct shipments to your customers: </strong>
-                Upon request, we also handle delivery directly to the final
-                recipients.
+                <strong>
+                  {supportPageTranslate.logisticsSection[translation]
+                    ?.header3 ||
+                    supportPageTranslate.logisticsSection.uk.header3}{' '}
+                </strong>
+                {supportPageTranslate.logisticsSection[translation]
+                  ?.subheader3 ||
+                  supportPageTranslate.logisticsSection.uk.subheader3}
               </p>
               <p>
-                <strong>Traceability and transparency: </strong>
-                We ensure total control along the entire supply chain.
+                <strong>
+                  {supportPageTranslate.logisticsSection[translation]
+                    ?.header4 ||
+                    supportPageTranslate.logisticsSection.uk.header4}
+                </strong>
+                {supportPageTranslate.logisticsSection[translation]
+                  ?.subheader4 ||
+                  supportPageTranslate.logisticsSection.uk.subheader4}
               </p>
             </motion.div>
           </div>

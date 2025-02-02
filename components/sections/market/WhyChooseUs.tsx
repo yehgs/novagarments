@@ -1,7 +1,16 @@
 'use client';
 import { motion } from 'framer-motion';
+import useLanguageStore from '@/store/useLanguageStore';
+import { marketPageTranslate } from '@/app/utils/translate';
+import { useEffect } from 'react';
 
 const WhyChooseUs = () => {
+  const { translation, detectUserLanguage } = useLanguageStore();
+
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
+
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
@@ -24,7 +33,8 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="lg:text-h2 text-h3 text-center md:text-left font-bold"
         >
-          Who Chooses Us
+          {marketPageTranslate.whyChooseUsSection[translation]?.header ||
+            marketPageTranslate.whyChooseUsSection.uk.header}
         </motion.h1>
         <motion.p
           variants={textVariants}
@@ -33,14 +43,15 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="lg:text-2xl text-base"
         >
-          Manufacturers and importers of work and promotional apparel, who seek
-          efficient and customized solutions.
+          {marketPageTranslate.whyChooseUsSection[translation]?.text ||
+            marketPageTranslate.whyChooseUsSection.uk.text}
           <br /> <br />
-          Growing demand for flexibility for seasonal and capsule collections
+          {marketPageTranslate.whyChooseUsSection[translation]?.text2 ||
+            marketPageTranslate.whyChooseUsSection.uk.text2}
           <br />
           <strong>
-            Increasing need for integrated management to optimize profit
-            margins.
+            {marketPageTranslate.whyChooseUsSection[translation]?.boldTxt ||
+              marketPageTranslate.whyChooseUsSection.uk.boldTxt}
           </strong>
         </motion.p>
       </div>

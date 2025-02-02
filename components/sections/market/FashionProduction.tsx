@@ -1,10 +1,14 @@
 'use client';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+//import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
-import FashionBrand from './FashionBrand';
+import useLanguageStore from '@/store/useLanguageStore';
+import { marketPageTranslate } from '@/app/utils/translate';
+import { useEffect } from 'react';
 
 const FashionProduction = () => {
+  const { translation, detectUserLanguage } = useLanguageStore();
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -13,6 +17,11 @@ const FashionProduction = () => {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
+
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
+
   return (
     <div>
       <section ref={ref} className="flex flex-col md:flex-row w-full mb-10">
@@ -24,7 +33,8 @@ const FashionProduction = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="lg:text-h2 text-h3 md:text-xl text-center md:text-left font-bold leading-relaxed"
           >
-            Fashion Industry Production
+            {marketPageTranslate.fashionSection[translation]?.header ||
+              marketPageTranslate.fashionSection.uk.header}
           </motion.h1>
           <motion.p
             variants={textVariants}
@@ -33,9 +43,8 @@ const FashionProduction = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="lg:text-2xl text-base text-center md:text-left"
           >
-            Brands in men&apos;s, women&apos;s, and children&apos;s fashion,
-            underwear, textiles, and household sponges, from importer to large
-            retailers, seeking efficient and customized solutions.
+            {marketPageTranslate.fashionSection[translation]?.text ||
+              marketPageTranslate.fashionSection.uk.text}
           </motion.p>
           {/* <motion.span
             variants={textVariants}

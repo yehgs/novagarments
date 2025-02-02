@@ -2,12 +2,19 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
+import useLanguageStore from '@/store/useLanguageStore';
+import { marketPageTranslate } from '@/app/utils/translate';
+import { useEffect } from 'react';
 
 const ContactSection = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
+  const { translation, detectUserLanguage } = useLanguageStore();
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
@@ -25,7 +32,8 @@ const ContactSection = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="lg:text-h2 text-h3 font-bold"
         >
-          We are the ideal partner for your international productions
+          {marketPageTranslate.contactUsSection[translation]?.title ||
+            marketPageTranslate.contactUsSection.uk.title}
         </motion.h1>
         <motion.p
           variants={textVariants}
@@ -34,10 +42,8 @@ const ContactSection = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="text-xl"
         >
-          Choose to cooperate with us, you will have at your side a unique
-          interlocutor, experienced and reliable, who supports you at every
-          stage of the production process and helps you overcome the challenges
-          of global markets.
+          {marketPageTranslate.contactUsSection[translation]?.text ||
+            marketPageTranslate.contactUsSection.uk.text}
         </motion.p>
         <motion.p
           variants={textVariants}
@@ -46,7 +52,8 @@ const ContactSection = () => {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="text-2xl font-semibold"
         >
-          Produce safely and grow your business.
+          {marketPageTranslate.contactUsSection[translation]?.boldText ||
+            marketPageTranslate.contactUsSection.uk.boldText}
         </motion.p>
         <motion.span
           variants={textVariants}
@@ -59,7 +66,8 @@ const ContactSection = () => {
             href="/contact"
             className="py-3 px-14 lg:text-h3 font-semibold uppercase bg-black hover:bg-red-500 transition-all duration-300 text-white"
           >
-            Contact Us
+            {marketPageTranslate.contactUsSection[translation]?.buttonText ||
+              marketPageTranslate.contactUsSection.uk.buttonText}
           </Link>
         </motion.span>
       </div>

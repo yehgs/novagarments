@@ -4,6 +4,7 @@ import HeroSlider from '@/components/sections/home/HeroSlider';
 import HomeImageCards from '@/components/sections/home/HomeImageCards';
 import Production from '@/components/sections/home/Production';
 import VideoSection from '@/components/sections/home/VideoSection';
+import { TestimonialsSection } from '@/components/Testimonials';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <HomeImageCards />
       <Certificates />
       <CustomerFirst />
+      <TestimonialsSection />
       <VideoSection />
     </div>
   );

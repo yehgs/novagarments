@@ -1,13 +1,28 @@
+'use client';
+import { useEffect } from 'react';
 import ProductionCard from '@/components/ProductionCard';
-import React from 'react';
+import useLanguageStore from '@/store/useLanguageStore';
+import { homepageTranslate } from '@/app/utils/translate';
 
 const Production = () => {
+  const { translation, detectUserLanguage } = useLanguageStore();
+
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
   return (
     <>
       <div className="flex flex-col md:flex-row w-full">
         <div className="flex-1">
           <ProductionCard
-            text="Sportwear Production"
+            text={
+              homepageTranslate.productionSection[translation]?.beachTxt ||
+              homepageTranslate.productionSection.uk.sportTxt
+            }
+            btnTxt={
+              homepageTranslate.productionSection[translation]?.btnTxt ||
+              homepageTranslate.productionSection.uk.btnTxt
+            }
             path="/market"
             url="/images/pics1.jpg"
             cardColor="#004F88"
@@ -18,7 +33,14 @@ const Production = () => {
         </div>
         <div className="flex-1">
           <ProductionCard
-            text="Promotional Wear Production"
+            text={
+              homepageTranslate.productionSection[translation]?.promoTxt ||
+              homepageTranslate.productionSection.uk.promoTxt
+            }
+            btnTxt={
+              homepageTranslate.productionSection[translation]?.btnTxt ||
+              homepageTranslate.productionSection.uk.btnTxt
+            }
             path="/market"
             url="/images/pics2.jpg"
             cardColor="white"
@@ -31,7 +53,14 @@ const Production = () => {
       <div className="flex flex-col md:flex-row w-full">
         <div className="flex-1">
           <ProductionCard
-            text="Beachwear Production"
+            text={
+              homepageTranslate.productionSection[translation]?.beachTxt ||
+              homepageTranslate.productionSection.uk.beachTxt
+            }
+            btnTxt={
+              homepageTranslate.productionSection[translation]?.btnTxt ||
+              homepageTranslate.productionSection.uk.btnTxt
+            }
             path="/market"
             url="/images/pic29.jpg"
             cardColor="transparent"
@@ -42,7 +71,14 @@ const Production = () => {
         </div>
         <div className="flex-1">
           <ProductionCard
-            text="Underwear Production"
+            text={
+              homepageTranslate.productionSection[translation]?.underwearTxt ||
+              homepageTranslate.productionSection.uk.underwearTxt
+            }
+            btnTxt={
+              homepageTranslate.productionSection[translation]?.btnTxt ||
+              homepageTranslate.productionSection.uk.btnTxt
+            }
             path="/market"
             url="/images/pic28.jpg"
             cardColor="black/80"
@@ -54,10 +90,12 @@ const Production = () => {
       </div>
       <div className="my-20">
         <h1 className="lg:text-7xl md:text-6xl text-4xl font-bold text-center mb-3">
-          IN OUR WORLD
+          {homepageTranslate.productionSection[translation]?.bottomTxt ||
+            homepageTranslate.productionSection.uk.bottomTxt}
         </h1>
         <p className="text-xl text-center">
-          every connection is an opportunity
+          {homepageTranslate.productionSection[translation]?.bottomSubTxt ||
+            homepageTranslate.productionSection.uk.bottomSubTxt}
         </p>
       </div>
     </>

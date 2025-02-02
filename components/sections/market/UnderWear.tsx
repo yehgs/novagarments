@@ -1,10 +1,18 @@
 'use client';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+//import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 import FashionBrand from './FashionBrand';
+import { useEffect } from 'react';
+import useLanguageStore from '@/store/useLanguageStore';
+import { marketPageTranslate } from '@/app/utils/translate';
 
 const UnderWear = () => {
+  const { translation, detectUserLanguage } = useLanguageStore();
+
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -37,7 +45,11 @@ const UnderWear = () => {
             ></div>
           </div>
           <h2 className="absolute md:text-lg text-xs font-semibold top-[45%] left-[5%]">
-            High-quality, tailored to <br /> your needs.
+            {marketPageTranslate.underwearSection[translation]?.text1 ||
+              marketPageTranslate.underwearSection.uk.text1}
+            <br />
+            {marketPageTranslate.underwearSection[translation]?.text2 ||
+              marketPageTranslate.underwearSection.uk.text2}
           </h2>
           <div className="flex">
             <div className="flex justify-start items-center  w-[50%]">
@@ -66,12 +78,8 @@ const UnderWear = () => {
               transition={{ duration: 0.8, delay: 1 }}
               className="lg:text-2xl text-xs text-center md:text-left"
             >
-              We are a company specializing in the production of high-quality
-              underwear and Beachwear, designed to meet the specific needs of
-              our clients. Each piece is the result of a meticulous and
-              collaborative process, where the customer takes center stage: we
-              listen to your requests and transform them into unique products
-              that combine comfort, style, and excellence.
+              {marketPageTranslate.underwearSection[translation]?.text ||
+                marketPageTranslate.underwearSection.uk.text}
             </motion.p>
             {/* <motion.span
               variants={textVariants}

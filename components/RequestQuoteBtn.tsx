@@ -1,8 +1,9 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Children, ReactNode } from 'react';
 
-const DownloadButton = () => {
+const RequestQuoteBtn = ({ children }: { children: ReactNode }) => {
   return (
     <motion.button
       className=" px-6 py-4  relative radial-gradient border border-spacing-1"
@@ -27,7 +28,7 @@ const DownloadButton = () => {
     >
       <Link href="/contact">
         <span className="uppercase text-neutral-100 tracking-wide h-full w-full block relative linear-mask font-semibold">
-          Request Quote
+          {children}
         </span>
         <span className="block absolute inset-0 p-px linear-overlay" />
       </Link>
@@ -35,4 +36,4 @@ const DownloadButton = () => {
   );
 };
 
-export default DownloadButton;
+export default RequestQuoteBtn;

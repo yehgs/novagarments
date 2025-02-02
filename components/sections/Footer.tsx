@@ -1,17 +1,51 @@
+'use client';
 import HeaderText from '../HeaderText';
 import Link from 'next/link';
 import Image from 'next/image';
+import useLanguageStore from '@/store/useLanguageStore';
+import { homepageTranslate } from '@/app/utils/translate';
+import { useEffect } from 'react';
 
 const Footer = () => {
+  const { translation, detectUserLanguage } = useLanguageStore();
+
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
   const currentYear = new Date().getFullYear();
   const footerLink1 = [
-    { name: 'Home', path: '/' },
-    { name: 'Service', path: '/services' },
-    { name: 'Market', path: '/market' },
-    { name: 'Support', path: '/support' },
+    {
+      name:
+        homepageTranslate.headerSection[translation]?.home ||
+        homepageTranslate.headerSection.uk.home,
+      path: '/',
+    },
+    {
+      name:
+        homepageTranslate.headerSection[translation]?.services ||
+        homepageTranslate.headerSection.uk.services,
+      path: '/services',
+    },
+    {
+      name:
+        homepageTranslate.headerSection[translation]?.market ||
+        homepageTranslate.headerSection.uk.market,
+      path: '/market',
+    },
+    {
+      name:
+        homepageTranslate.headerSection[translation]?.support ||
+        homepageTranslate.headerSection.uk.support,
+      path: '/support',
+    },
   ];
   const footerLink2 = [
-    { name: 'About Us', path: '/about' },
+    {
+      name:
+        homepageTranslate.headerSection[translation]?.aboutUs ||
+        homepageTranslate.headerSection.uk.aboutUs,
+      path: '/about',
+    },
     { name: 'FAQ', path: '/faq' },
     { name: 'Policy & Privacy', path: '/policy' },
     { name: 'Terms and Conditions', path: '/terms' },
@@ -23,7 +57,7 @@ const Footer = () => {
   ];
 
   return (
-    <section className="w-[100vw] flex flex-col bg-tertiary">
+    <section className="w-[100vw] flex flex-col bg-gray-500">
       <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 justify-between items-start container py-12 w-full">
         <div className="col-span-1 lg:col-span-2 flex flex-col items-start gap-10">
           <Image
@@ -34,7 +68,10 @@ const Footer = () => {
             className="lg:h-24 h-20"
           />
           <HeaderText
-            title="PRODUCE SAFELY AND GROW YOUR BUSINESS."
+            title={
+              homepageTranslate.footerSection[translation]?.text ||
+              homepageTranslate.footerSection.uk.text
+            }
             className="md:text-2xl lg:text-3xl md:max-w-md text-xl max-w-xs"
           />
         </div>

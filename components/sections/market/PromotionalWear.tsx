@@ -1,10 +1,17 @@
 'use client';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+//import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 import PromoBrand from './PromoBrand';
+import useLanguageStore from '@/store/useLanguageStore';
+import { marketPageTranslate } from '@/app/utils/translate';
+import { useEffect } from 'react';
 
 const PromotionalWear = () => {
+  const { translation, detectUserLanguage } = useLanguageStore();
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
   const logos = [
     '/images/brands/promo/1.png',
     '/images/brands/promo/2.png',
@@ -42,7 +49,8 @@ const PromotionalWear = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="lg:text-h2 text-h3 md:text-xl text-center md:text-left font-bold"
           >
-            Promotional Wear Production
+            {marketPageTranslate.promowearSection[translation]?.header ||
+              marketPageTranslate.promowearSection.uk.header}
           </motion.h1>
           <motion.p
             variants={textVariants}
@@ -51,11 +59,8 @@ const PromotionalWear = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="lg:text-2xl text-base text-center md:text-left"
           >
-            With years of experience in the industry, we specialize in the
-            production of promotional wear that blends style, comfort, and
-            functionality. Whether for events, corporate branding, or
-            promotional campaigns, our garments are designed to represent your
-            brand with distinction and quality.
+            {marketPageTranslate.promowearSection[translation]?.text ||
+              marketPageTranslate.promowearSection.uk.text}
           </motion.p>
           {/* <motion.span
             variants={textVariants}

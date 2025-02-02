@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { Country } from 'country-state-city';
 import emailjs from 'emailjs-com';
 import { Toaster, toast } from 'react-hot-toast';
 import Confetti from 'react-confetti';
+import useLanguageStore from '@/store/useLanguageStore';
+import { contactUsTranslate } from '@/app/utils/translate';
 
 // Dynamic import of Select to avoid SSR issues
 const DynamicSelect = dynamic(() => import('react-select'), { ssr: false });
@@ -16,6 +18,10 @@ interface Option {
 }
 
 const ContactForm: React.FC = () => {
+  const { translation, detectUserLanguage } = useLanguageStore();
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
   const [formData, setFormData] = useState({
     fullname: '',
     role: '',
@@ -141,7 +147,8 @@ const ContactForm: React.FC = () => {
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="fullname" className="block text-sm font-medium">
-            Contact Name
+            {contactUsTranslate.contactUsSection[translation]?.contactName ||
+              contactUsTranslate.contactUsSection.uk.contactName}
           </label>
           <input
             type="text"
@@ -156,7 +163,8 @@ const ContactForm: React.FC = () => {
 
         <div className="mb-4">
           <label htmlFor="fullname" className="block text-sm font-medium">
-            Company Name
+            {contactUsTranslate.contactUsSection[translation]?.companyName ||
+              contactUsTranslate.contactUsSection.uk.companyName}
           </label>
           <input
             type="text"
@@ -170,7 +178,8 @@ const ContactForm: React.FC = () => {
 
         <div className="mb-4">
           <label htmlFor="nationality" className="block text-sm font-medium">
-            Country
+            {contactUsTranslate.contactUsSection[translation]?.country ||
+              contactUsTranslate.contactUsSection.uk.country}
           </label>
           <DynamicSelect
             id="nationality"
@@ -188,18 +197,25 @@ const ContactForm: React.FC = () => {
 
         <div className="mb-4">
           <label htmlFor="garmentSector" className="block text-sm font-medium">
-            What garment sector are you interested in?
+            {contactUsTranslate.contactUsSection[translation]?.text ||
+              contactUsTranslate.contactUsSection.uk.text}
           </label>
           <DynamicSelect
             id="garmentSector"
             isMulti
             options={convertToOptions([
-              'Fashion',
-              'Underwear',
-              'Beachwear',
-              'Sportswear',
-              'Promo Wear',
-              'Workwear',
+              contactUsTranslate.contactUsSection[translation]?.option1 ||
+                contactUsTranslate.contactUsSection.uk.option1,
+              contactUsTranslate.contactUsSection[translation]?.option2 ||
+                contactUsTranslate.contactUsSection.uk.option2,
+              contactUsTranslate.contactUsSection[translation]?.option3 ||
+                contactUsTranslate.contactUsSection.uk.option3,
+              contactUsTranslate.contactUsSection[translation]?.option4 ||
+                contactUsTranslate.contactUsSection.uk.option4,
+              contactUsTranslate.contactUsSection[translation]?.option5 ||
+                contactUsTranslate.contactUsSection.uk.option5,
+              contactUsTranslate.contactUsSection[translation]?.option6 ||
+                contactUsTranslate.contactUsSection.uk.option6,
             ])}
             value={formData.garmentSector}
             onChange={(newValue) =>
@@ -210,7 +226,8 @@ const ContactForm: React.FC = () => {
 
         <div className="mb-4">
           <label htmlFor="address" className="block text-sm font-medium">
-            Address
+            {contactUsTranslate.contactUsSection[translation]?.address ||
+              contactUsTranslate.contactUsSection.uk.address}
           </label>
           <input
             type="text"
@@ -224,7 +241,8 @@ const ContactForm: React.FC = () => {
 
         <div className="mb-4">
           <label htmlFor="phone" className="block text-sm font-medium">
-            Phone
+            {contactUsTranslate.contactUsSection[translation]?.phone ||
+              contactUsTranslate.contactUsSection.uk.phone}
           </label>
           <input
             type="tel"
@@ -239,7 +257,8 @@ const ContactForm: React.FC = () => {
 
         <div className="mb-4">
           <label htmlFor="email" className="block text-sm font-medium">
-            Email
+            {contactUsTranslate.contactUsSection[translation]?.email ||
+              contactUsTranslate.contactUsSection.uk.email}
           </label>
           <input
             type="email"
@@ -254,7 +273,8 @@ const ContactForm: React.FC = () => {
 
         <div className="mb-4">
           <label htmlFor="message" className="block text-sm font-medium">
-            Message
+            {contactUsTranslate.contactUsSection[translation]?.message ||
+              contactUsTranslate.contactUsSection.uk.message}
           </label>
           <textarea
             id="message"
@@ -271,7 +291,8 @@ const ContactForm: React.FC = () => {
           type="submit"
           className="w-full bg-blue text-white hover:bg-accent font-bold py-3 px-5 rounded-md transition-all duration-300"
         >
-          Send Request
+          {contactUsTranslate.contactUsSection[translation]?.btnText ||
+            contactUsTranslate.contactUsSection.uk.btnText}
         </button>
       </form>
 

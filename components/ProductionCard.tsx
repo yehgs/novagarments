@@ -1,5 +1,5 @@
 'use client';
-
+import { useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -9,6 +9,7 @@ const ProductionCard = ({
   url,
   cardColor,
   buttonColor,
+  btnTxt,
   buttonTextColor,
   textColor,
 }: {
@@ -19,6 +20,7 @@ const ProductionCard = ({
   buttonColor: string;
   buttonTextColor: string;
   textColor: string;
+  btnTxt: string;
 }) => {
   return (
     <div
@@ -53,7 +55,7 @@ const ProductionCard = ({
               }}
               className="py-3 px-14 lg:text-h3 font-semibold uppercase hover:bg-red-500"
             >
-              More
+              {btnTxt}
             </Link>
           </motion.span>
         </div>

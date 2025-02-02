@@ -6,6 +6,8 @@ import Footer from '@/components/sections/Footer';
 import StairEffect from '@/components/StairEffect';
 import PageTransition from '@/components/PageTransition';
 import WhatsAppChat from '@/components/WhatsAppChat';
+import CookieNotification from '@/components/CookieNotification';
+import SubscriptionPopup from '@/components/SubscriptionPopup';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -46,6 +48,8 @@ export default function RootLayout({
             <div className="flex-grow mt-[10vh] lg:mt-[100px]">{children}</div>
             <Footer />
             <WhatsAppChat />
+            <CookieNotification />
+            <SubscriptionPopup />
           </PageTransition>
         </div>
       </body>

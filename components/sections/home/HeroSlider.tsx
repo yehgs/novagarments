@@ -6,10 +6,17 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import useLanguageStore from '@/store/useLanguageStore';
+import { homepageTranslate } from '@/app/utils/translate';
 
 const FullScreenSlider: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { translation, detectUserLanguage } = useLanguageStore();
+
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
 
   // Animation variants
   const textVariants = {
@@ -49,8 +56,8 @@ const FullScreenSlider: React.FC = () => {
               animate={activeIndex === 0 ? 'visible' : 'hidden'}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Production Finance Logistics everything you need to make grow your
-              business.
+              {homepageTranslate.sliderSection[translation]?.slider1MainTxt ||
+                homepageTranslate.sliderSection.uk.slider1MainTxt}
             </motion.p>
             <motion.p
               className="md:text-4xl text-3xl italic font-semibold max-w-sm"
@@ -59,7 +66,9 @@ const FullScreenSlider: React.FC = () => {
               animate={activeIndex === 0 ? 'visible' : 'hidden'}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Let&lsquo;s get your your international ambitions!
+              {homepageTranslate.sliderSection[translation]
+                ?.slider1SubMainTxt ||
+                homepageTranslate.sliderSection.uk.slider1SubMainTxt}
             </motion.p>
           </div>
         </div>
@@ -86,7 +95,8 @@ const FullScreenSlider: React.FC = () => {
               animate={activeIndex === 1 ? 'visible' : 'hidden'}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Fashion Industry Production
+              {homepageTranslate.sliderSection[translation]?.slider2MainTxt ||
+                homepageTranslate.sliderSection.uk.slider2MainTxt}
             </motion.p>
             <motion.p
               className="md:text-4xl text-3xl italic font-semibold max-w-sm"
@@ -95,7 +105,9 @@ const FullScreenSlider: React.FC = () => {
               animate={activeIndex === 1 ? 'visible' : 'hidden'}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Where collaborations become results.
+              {homepageTranslate.sliderSection[translation]
+                ?.slider1SubMainTxt ||
+                homepageTranslate.sliderSection.uk.slider1SubMainTxt}
             </motion.p>
           </div>
         </div>
@@ -122,7 +134,8 @@ const FullScreenSlider: React.FC = () => {
               animate={activeIndex === 2 ? 'visible' : 'hidden'}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Worker Industry Production
+              {homepageTranslate.sliderSection[translation]?.slider3MainTxt ||
+                homepageTranslate.sliderSection.uk.slider3MainTxt}
             </motion.p>
             <motion.p
               className="md:text-4xl text-3xl italic font-semibold max-w-sm md:max-w-lg"
@@ -131,7 +144,9 @@ const FullScreenSlider: React.FC = () => {
               animate={activeIndex === 2 ? 'visible' : 'hidden'}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Where networking fuels your business.
+              {homepageTranslate.sliderSection[translation]
+                ?.slider1SubMainTxt ||
+                homepageTranslate.sliderSection.uk.slider1SubMainTxt}
             </motion.p>
           </div>
         </div>

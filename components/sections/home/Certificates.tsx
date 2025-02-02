@@ -1,4 +1,8 @@
+'use client';
+import { useEffect } from 'react';
 import MarqueeCard from '@/components/MarqueeCard';
+import useLanguageStore from '@/store/useLanguageStore';
+import { homepageTranslate } from '@/app/utils/translate';
 
 const Certificates = () => {
   const images = [
@@ -12,10 +16,22 @@ const Certificates = () => {
     '/images/certificates/textile.png',
     '/images/certificates/bsci.png',
   ];
+  const { translation, detectUserLanguage } = useLanguageStore();
+
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
+
   return (
     <div className="flex justify-center items-center gap-7 w-full container">
       <div className="inset-0 overflow-hidden">
-        <MarqueeCard images={images} text="Certificates" />
+        <MarqueeCard
+          images={images}
+          text={
+            homepageTranslate.certificateSection[translation]?.header ||
+            homepageTranslate.certificateSection.uk.header
+          }
+        />
       </div>
     </div>
   );

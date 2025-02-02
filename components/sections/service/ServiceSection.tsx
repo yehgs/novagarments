@@ -1,14 +1,26 @@
+'use client';
 import ImageTextCard from '@/components/ImageTextCard';
+import useLanguageStore from '@/store/useLanguageStore';
+import { servicePageTranslate } from '@/app/utils/translate';
+import { useEffect } from 'react';
 
 const ServiceSection = () => {
+  const { translation, detectUserLanguage } = useLanguageStore();
+
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
   const content = [
     {
       path: '/images/slide2.jpg',
       cardBgColor: '#e8e8e8',
       imgClassName: '',
-      title: 'COLLECTION AND PRODUCTION',
+      title:
+        servicePageTranslate.serviceSection[translation]?.title ||
+        servicePageTranslate.serviceSection.uk.title,
       text2:
-        'You will be able to create customized collections and request tailor-made productions, staying connected to the processes at every stage. Thanks to our integrated platform, you will have full control and visibility over every detail, from design to production.',
+        servicePageTranslate.serviceSection[translation]?.subTitle ||
+        servicePageTranslate.serviceSection.uk.subTitle,
       titleClassName: 'text-[1.5rem] font-bold',
       textClassName: 'text-base',
       cardClassName: 'lg:py-24 md:py-10 px-8 py-8',
@@ -17,9 +29,12 @@ const ServiceSection = () => {
       path: '/images/pic11.jpg',
       cardBgColor: 'white',
       imgClassName: '',
-      title: 'ACHIEVE YOUR TARGET PRICE',
+      title:
+        servicePageTranslate.serviceSection[translation]?.title2 ||
+        servicePageTranslate.serviceSection.uk.title2,
       text2:
-        'Access selected suppliers and take advantage of economies of scale to get the best value for money. With us, you save money without sacrificing quality.',
+        servicePageTranslate.serviceSection[translation]?.subTitle2 ||
+        servicePageTranslate.serviceSection.uk.subTitle2,
       titleClassName: 'text-[1.5rem] font-bold',
       textClassName: 'text-base',
       cardClassName: 'lg:py-24 md:py-10 px-8 py-8',
@@ -28,9 +43,12 @@ const ServiceSection = () => {
       path: '/images/pic12.jpg',
       cardBgColor: '#e8e8e8',
       imgClassName: '',
-      title: 'QUALITY GUARANTEED WITH AQL',
+      title:
+        servicePageTranslate.serviceSection[translation]?.title3 ||
+        servicePageTranslate.serviceSection.uk.title3,
       text2:
-        'Our quality control service based on AQL (Acceptance Quality Limit) is designed to ensure that your products meet the highest standards of quality and compliance. We work to guarantee maximum customer satisfaction, minimize defects, and optimize production processes.',
+        servicePageTranslate.serviceSection[translation]?.subTitle3 ||
+        servicePageTranslate.serviceSection.uk.subTitle3,
       titleClassName: 'text-[1.5rem] font-bold',
       textClassName: 'text-base',
       cardClassName: 'lg:py-24 md:py-10 px-8 py-8',
@@ -39,9 +57,12 @@ const ServiceSection = () => {
       path: '/images/pic6.jpg',
       cardBgColor: 'white',
       imgClassName: '',
-      title: 'INTERNATIONAL FREIGHTS',
+      title:
+        servicePageTranslate.serviceSection[translation]?.title4 ||
+        servicePageTranslate.serviceSection.uk.title4,
       text2:
-        'By sea, air or SEA/AIR, choose the best solution for your time and budget. Customs and tax warehousing: Eliminate upfront costs on VAT with our tax-authorized warehouse in the Netherlands.',
+        servicePageTranslate.serviceSection[translation]?.subTitle4 ||
+        servicePageTranslate.serviceSection.uk.subTitle4,
       titleClassName: 'text-[1.5rem] font-bold',
       textClassName: 'text-base',
       cardClassName: 'lg:py-24 md:py-10 px-8 py-8',
@@ -50,9 +71,12 @@ const ServiceSection = () => {
       path: '/images/pic4.jpg',
       cardBgColor: '#e8e8e8',
       imgClassName: '',
-      title: 'YOUR DELIVERY DATE',
+      title:
+        servicePageTranslate.serviceSection[translation]?.title5 ||
+        servicePageTranslate.serviceSection.uk.title5,
       text2:
-        'We offer a distribution service across Europe, ensuring delivery within 48 hours. We can handle shipments of all sizes, from single parcels to full loads, ensuring optimal efficiency and punctuality. Trust us for a secure and professional service.',
+        servicePageTranslate.serviceSection[translation]?.subTitle5 ||
+        servicePageTranslate.serviceSection.uk.subTitle5,
       titleClassName: 'text-[1.5rem] font-bold',
       textClassName: 'text-base',
       cardClassName: 'lg:py-24 md:py-10 px-8 py-8',
@@ -61,9 +85,12 @@ const ServiceSection = () => {
       path: '/images/pic13.jpg',
       cardBgColor: 'white',
       imgClassName: '',
-      title: 'CUSTOMIZED SERVICE',
+      title:
+        servicePageTranslate.serviceSection[translation]?.title6 ||
+        servicePageTranslate.serviceSection.uk.title6,
       text2:
-        "Our service simplifies your company's financial management, ensuring that your orders are initiated quickly and without banking obstacles. We provide support to streamline payment flows, overcome bureaucratic complexities, and ensure operational continuity with flexible financial solutions.",
+        servicePageTranslate.serviceSection[translation]?.subTitle6 ||
+        servicePageTranslate.serviceSection.uk.subTitle6,
       titleClassName: 'text-[1.5rem] font-bold',
       textClassName: 'text-base',
       cardClassName: 'lg:py-24 md:py-10 px-8 py-8',

@@ -1,14 +1,20 @@
 'use client';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 import SportswearBrands from './SportsWearBrands';
+import useLanguageStore from '@/store/useLanguageStore';
+import { marketPageTranslate } from '@/app/utils/translate';
+import { useEffect } from 'react';
 
 const SportWear = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
+  const { translation, detectUserLanguage } = useLanguageStore();
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
@@ -35,7 +41,8 @@ const SportWear = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="lg:text-h2 text-h3 md:text-xl text-center md:text-left font-bold"
           >
-            Sportswear Production
+            {marketPageTranslate.sportwearSection[translation]?.header ||
+              marketPageTranslate.sportwearSection.uk.header}
           </motion.h1>
           <motion.p
             variants={textVariants}
@@ -44,10 +51,8 @@ const SportWear = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="lg:text-2xl text-base text-center md:text-left"
           >
-            We are leaders in creating sportswear that combines performance,
-            comfort, and cutting-edge design. From running to fitness, from
-            soccer to outdoor sports, our sportswear productions are made to
-            support every movement and inspire every athlete.
+            {marketPageTranslate.sportwearSection[translation]?.text ||
+              marketPageTranslate.sportwearSection.uk.text}
           </motion.p>
           {/* <motion.span
             variants={textVariants}

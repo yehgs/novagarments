@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -12,33 +12,66 @@ import {
   ListboxOption,
   ListboxOptions,
 } from '@headlessui/react';
+import useLanguageStore from '@/store/useLanguageStore';
+import { homepageTranslate } from '@/app/utils/translate';
 
-interface LanguageOption {
+interface LanguageOptionProps {
   label: string;
-  value: string;
+  value: 'uk' | 'it';
   flag: string;
 }
+
+const languageOptions: LanguageOptionProps[] = [
+  { label: 'UK', value: 'uk', flag: '/images/uk.svg' },
+  { label: 'Italia', value: 'it', flag: '/images/italy.svg' },
+];
 
 const NavBar: React.FC = () => {
   const pathname = usePathname();
   const [menu, setMenu] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState<LanguageOption>({
-    label: 'UK',
-    value: 'uk',
-    flag: '/images/uk.svg',
-  });
+  const { translation, setTranslation, detectUserLanguage } =
+    useLanguageStore();
 
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
+
+  // Ensure selectedLanguage defaults to 'uk'
+  const selectedLanguage =
+    languageOptions.find((l) => l.value === translation) || languageOptions[0];
+
+  // Fallback to 'uk' if translation is invalid
   const links = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'Market', path: '/market' },
-    { name: 'Support', path: '/support' },
-    { name: 'About Us', path: '/about' },
-  ];
-
-  const languageOptions: LanguageOption[] = [
-    { label: 'UK', value: 'uk', flag: '/images/uk.svg' },
-    { label: 'Italy', value: 'it', flag: '/images/italy.svg' },
+    {
+      name:
+        homepageTranslate.headerSection[translation]?.home ||
+        homepageTranslate.headerSection.uk.home,
+      path: '/',
+    },
+    {
+      name:
+        homepageTranslate.headerSection[translation]?.services ||
+        homepageTranslate.headerSection.uk.services,
+      path: '/services',
+    },
+    {
+      name:
+        homepageTranslate.headerSection[translation]?.market ||
+        homepageTranslate.headerSection.uk.market,
+      path: '/market',
+    },
+    {
+      name:
+        homepageTranslate.headerSection[translation]?.support ||
+        homepageTranslate.headerSection.uk.support,
+      path: '/support',
+    },
+    {
+      name:
+        homepageTranslate.headerSection[translation]?.aboutUs ||
+        homepageTranslate.headerSection.uk.aboutUs,
+      path: '/about',
+    },
   ];
 
   const toggleMenu = () => setMenu((prev) => !prev);
@@ -72,7 +105,10 @@ const NavBar: React.FC = () => {
           </div>
           <div className="flex items-center gap-4">
             {/* Language Dropdown */}
-            <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
+            <Listbox
+              value={selectedLanguage}
+              onChange={(lang) => setTranslation(lang.value)}
+            >
               <div className="relative">
                 <ListboxButton className="flex items-center gap-2">
                   <Image
@@ -108,7 +144,10 @@ const NavBar: React.FC = () => {
                 </ListboxOptions>
               </div>
             </Listbox>
-            <RequestQuoteBtn />
+            <RequestQuoteBtn>
+              {homepageTranslate.headerSection[translation]?.requestQuote ||
+                homepageTranslate.headerSection.uk.requestQuote}
+            </RequestQuoteBtn>
           </div>
         </div>
 
@@ -151,7 +190,7 @@ const NavBar: React.FC = () => {
                 <div className="flex items-center gap-4">
                   <Listbox
                     value={selectedLanguage}
-                    onChange={setSelectedLanguage}
+                    onChange={(lang) => setTranslation(lang.value)}
                   >
                     <div className="relative">
                       <ListboxButton className="flex items-center gap-2">
@@ -189,7 +228,10 @@ const NavBar: React.FC = () => {
                     </div>
                   </Listbox>
                 </div>
-                <RequestQuoteBtn />
+                <RequestQuoteBtn>
+                  {homepageTranslate.headerSection[translation]?.requestQuote ||
+                    homepageTranslate.headerSection.uk.requestQuote}
+                </RequestQuoteBtn>
               </div>
             )}
           </div>
