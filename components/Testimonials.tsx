@@ -12,18 +12,18 @@ const testimonials = [
     boldText: '"Operational and Dynamic"',
     text: 'Thanks to their support, I was able to import materials from Pakistan with great ease. A truly operational team and excellent support at every stage.',
   },
-  {
-    name: 'From John (MD of ……. )',
-    time: '( 19 Nov 2024 )',
-    boldText: '"Overcoming Customs Challenges"',
-    text: 'I finally found a company that guided me from start to finish, taking care of every detail. I would recommend them without hesitation.',
-  },
-  {
-    name: 'From Donna (Admin of ……. )',
-    time: '( 06 Oct 2024 )',
-    boldText: '"Overcoming Customs Challenges"',
-    text: 'Initially, I was concerned about the potential complexities related to European customs procedures. However, thanks to their expert handling, the entire process was completely simplified, and the product was delivered directly to our warehouses without any effort.',
-  },
+  //   {
+  //     name: 'From John (MD of ……. )',
+  //     time: '( 19 Nov 2024 )',
+  //     boldText: '"Overcoming Customs Challenges"',
+  //     text: 'I finally found a company that guided me from start to finish, taking care of every detail. I would recommend them without hesitation.',
+  //   },
+  //   {
+  //     name: 'From Donna (Admin of ……. )',
+  //     time: '( 06 Oct 2024 )',
+  //     boldText: '"Overcoming Customs Challenges"',
+  //     text: 'Initially, I was concerned about the potential complexities related to European customs procedures. However, thanks to their expert handling, the entire process was completely simplified, and the product was delivered directly to our warehouses without any effort.',
+  //   },
   {
     name: 'From Esther (Director of FEMY ltd)',
     time: '( 02 Oct 2024 )',
@@ -81,7 +81,7 @@ export const TestimonialsSection = () => {
                             {testimonial.name}
                           </h4>
                         </div>
-                        <span className="font-light text-xs">
+                        <span className="font-light text-xs w-[25%]">
                           {testimonial.time}
                         </span>
                       </div>
