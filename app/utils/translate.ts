@@ -45,6 +45,10 @@ export type CertificateSection = {
   header: string;
 };
 
+export type TestimonialSection = {
+  header: string;
+};
+
 export type CustomerSection = {
   text: string;
   subText: string;
@@ -76,6 +80,7 @@ export type HomepageTranslate = {
   imageCardsSection: Record<LanguageCode, ImageCardsSection>;
   certificateSection: Record<LanguageCode, CertificateSection>;
   customerSection: Record<LanguageCode, CustomerSection>;
+  testimonialSection: Record<LanguageCode, TestimonialSection>;
   footerSection: Record<LanguageCode, FooterSection>;
   popUpSection: Record<LanguageCode, PopUpSection>;
   cookieSection: Record<LanguageCode, CookieSection>;
@@ -176,6 +181,14 @@ export const homepageTranslate: HomepageTranslate = {
     },
     it: {
       header: `Certificazioni`,
+    },
+  },
+  testimonialSection: {
+    uk: {
+      header: 'Client Testimonials',
+    },
+    it: {
+      header: 'Testimonianze dei clienti',
     },
   },
   customerSection: {

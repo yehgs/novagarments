@@ -3,7 +3,10 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { FaArrowLeft, FaArrowRight, FaRegStar, FaStar } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import useLanguageStore from '@/store/useLanguageStore';
+import { homepageTranslate } from '@/app/utils/translate';
+import { useEffect } from 'react';
 
 const testimonials = [
   {
@@ -39,13 +42,20 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
+  const { translation, detectUserLanguage } = useLanguageStore();
+
+  useEffect(() => {
+    detectUserLanguage();
+  }, [detectUserLanguage]);
+
   return (
     <div className=" text-white bg-black border-b border-gray-400/30">
       <div className="margins py-24 container">
         <div className="grid lg:grid-cols-7 grid-cols-1 gap-4">
           <div className="lg:col-span-2 flex items-center justify-center lg:justify-start">
             <h1 className="lg:text-h2 text-h3 font-bold mb-2 md:mb-0">
-              Client Testimonials
+              {homepageTranslate.testimonialSection[translation]?.header ||
+                homepageTranslate.testimonialSection.uk.header}
             </h1>
           </div>
           <div className="lg:col-span-5 ">

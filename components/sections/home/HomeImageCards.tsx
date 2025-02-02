@@ -11,10 +11,6 @@ const HomeImageCard = () => {
     detectUserLanguage();
   }, [detectUserLanguage]);
 
-  useEffect(() => {
-    detectUserLanguage();
-  }, [detectUserLanguage]);
-
   return (
     <div className="flex flex-col w-full">
       <div className="flex flex-col md:flex-row w-full">
