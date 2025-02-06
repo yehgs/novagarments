@@ -25,7 +25,7 @@ const SubscriptionPopup = () => {
     <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50">
       <div className="relative w-[700px] lg:w-[800px] h-[450px] lg:h-[450px] shadow-lg">
         <Image
-          src="/images/Picture2.png"
+          src="/images/picture2.png"
           alt="Popup Background"
           layout="fill"
           objectFit="cover"
