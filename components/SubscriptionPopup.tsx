@@ -6,45 +6,40 @@ import useLanguageStore from '@/store/useLanguageStore';
 import { marketPageTranslate } from '@/app/utils/translate';
 import { homepageTranslate } from '@/app/utils/translate';
 import Link from 'next/link';
+import Image from 'next/image';
 const SubscriptionPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { translation, detectUserLanguage } = useLanguageStore();
+
   useEffect(() => {
     detectUserLanguage();
   }, [detectUserLanguage]);
 
   useEffect(() => {
-    const lastPopupDate = localStorage.getItem('lastPopupDate');
-    const today = new Date().toISOString().split('T')[0];
-
-    if (!lastPopupDate || lastPopupDate !== today) {
-      setTimeout(() => setIsVisible(true), 1000);
-      localStorage.setItem('lastPopupDate', today);
-    }
+    setTimeout(() => setIsVisible(true), 1000);
   }, []);
 
-  const bgImage = '/images/Picture2.png';
   if (!isVisible) return null;
 
   return (
     <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50">
-      <div
-        className="bg-white shadow-lg text-center relative w-[700px] h-[450] lg:w-[800px] lg:h-[450px] p-4"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+      <div className="relative w-[700px] lg:w-[800px] h-[450px] lg:h-[450px] shadow-lg">
+        <Image
+          src="/images/Picture2.png"
+          alt="Popup Background"
+          layout="fill"
+          objectFit="cover"
+          className="absolute inset-0 w-full h-full z-0"
+          priority
+        />
         <motion.button
           whileHover={{ scale: 1.2 }}
           onClick={() => setIsVisible(false)}
-          className="absolute top-2 right-2 text-red-600 hover:text-red-500 transition"
+          className="absolute top-2 right-2 text-red-600 hover:text-red-500 transition z-20 text-center"
         >
           <X size={30} />
         </motion.button>
-        <div className="bg-white w-2/3 md:w-1/2 h-full p-6 flex justify-between flex-col text-sm">
+        <div className="bg-white w-2/3 md:w-1/2 h-full p-6 flex justify-between flex-col text-sm z-20 absolute ">
           <h2 className="text-left font-bold">
             {homepageTranslate.popUpSection[translation]?.header ||
               homepageTranslate.popUpSection.uk.header}
