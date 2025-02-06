@@ -123,7 +123,7 @@ export const homepageTranslate: HomepageTranslate = {
       slider1SubMainTxt: 'Diamo voce alle vostre ambizioni internazionali!',
       slider2MainTxt: `Produzione per l’industria della moda`,
       slider2SubMainTxt: `Dove la collaborazione diventa risultato.`,
-      slider3MainTxt: `Produzione per l’industria del abbigliamneto da lavoro.`,
+      slider3MainTxt: `Produzione di abbigliamento da lavoro.`,
       slider3SubMainTxt: `Dove il networking alimenta il vostro business.`,
     },
   },
