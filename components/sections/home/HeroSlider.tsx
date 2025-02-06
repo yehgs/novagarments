@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 import useLanguageStore from '@/store/useLanguageStore';
 import { homepageTranslate } from '@/app/utils/translate';
 
-const FullScreenSlider: React.FC = () => {
+const HeroSlider: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { translation, detectUserLanguage } = useLanguageStore();
 
@@ -155,4 +155,4 @@ const FullScreenSlider: React.FC = () => {
   );
 };
 
-export default FullScreenSlider;
+export default HeroSlider;

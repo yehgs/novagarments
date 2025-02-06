@@ -139,8 +139,8 @@ export const homepageTranslate: HomepageTranslate = {
     },
     it: {
       sportTxt: `Produzione per l’industria dell’abbigliamneto Sportivo.`,
-      promoTxt: `Produzione per   l’industria dell’abbigliamento Promozionale.`,
-      beachTxt: `Produzione Beachwear`,
+      promoTxt: `Produzioni di abbigliamento Promozionale.`,
+      beachTxt: `Produzioni di abbigliamento Sportivo.`,
       underwearTxt: `Produzione Underwear`,
       btnTxt: 'Scopri',
       bottomTxt: `NEL NOSTRO MONDO`,
@@ -404,7 +404,8 @@ export const marketPageTranslate: MarketPageTranslate = {
       text2: `your needs.`,
     },
     it: {
-      text: `Collaboriamo con  marchi della moda uomo, donna ,bambino, dell'intimo, del tessile e delle spugne per la casa, dall'importatore alla grande distribuzione, cercano soluzioni efficienti e personalizzate.`,
+      text: `Siamo un'azienda specializzata nella produzione di biancheria intima e beachwear di alta qualità, pensata per soddisfare le esigenze specifiche dei nostri clienti. Ogni capo è il risultato di un processo meticoloso e collaborativo, in cui il cliente è al centro dell'attenzione: ascoltiamo le sue richieste e le trasformiamo in prodotti unici che combinano comfort e stile.
+`,
       text1: `Qualita su misura per le`,
       text2: `vostre esigenze.`,
     },

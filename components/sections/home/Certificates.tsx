@@ -23,7 +23,7 @@ const Certificates = () => {
   }, [detectUserLanguage]);
 
   return (
-    <div className="flex justify-center items-center gap-7 w-full container">
+    <div className="flex justify-center items-center gap-7 w-full container mt-5">
       <div className="inset-0 overflow-hidden">
         <MarqueeCard
           images={images}

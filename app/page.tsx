@@ -1,3 +1,4 @@
+import ProductImgSlides from '@/components/ProductImgSlides';
 import Certificates from '@/components/sections/home/Certificates';
 import CustomerFirst from '@/components/sections/home/CustomerFirst';
 import HeroSlider from '@/components/sections/home/HeroSlider';
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSlider />
       <Production />
       <HomeImageCards />
+      <ProductImgSlides />
       <Certificates />
       <CustomerFirst />
       <TestimonialsSection />
