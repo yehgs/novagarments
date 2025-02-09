@@ -29,7 +29,7 @@ const HomeImageCard = () => {
             }
             titleClassName="lg:text-h3 md:text-xl font-bold"
             textClassName="lg:text-base md:text-sm"
-            cardClassName="lg:py-28 md:py-16 md:px-20 lg:px-36 p-6"
+            cardClassName="xl:py-28 md:py-16 md:px-16 xl:px-36 p-6"
           />
         </div>
         <div className="md:w-1/2">
@@ -47,7 +47,7 @@ const HomeImageCard = () => {
             }
             titleClassName="lg:text-h3 md:text-xl font-bold"
             textClassName="lg:text-base md:text-sm"
-            cardClassName="lg:py-28 md:py-16 md:px-20 lg:px-36 p-6"
+            cardClassName="xl:py-28 md:py-16 md:px-16 xl:px-36 p-6"
           />
         </div>
       </div>
@@ -67,7 +67,7 @@ const HomeImageCard = () => {
             }
             titleClassName="lg:text-h3 md:text-xl font-bold"
             textClassName="lg:text-base md:text-sm"
-            cardClassName="lg:py-28 md:py-16 md:px-20 lg:px-36 p-6"
+            cardClassName="xl:py-28 md:py-16 md:px-16 xl:px-36 p-6"
           />
         </div>
         <div className="md:w-1/2">
@@ -85,7 +85,7 @@ const HomeImageCard = () => {
             }
             titleClassName="lg:text-h3 md:text-xl font-bold"
             textClassName="lg:text-base md:text-sm"
-            cardClassName="lg:py-28 md:py-16 md:px-20 lg:px-36 p-6"
+            cardClassName="xl:py-28 md:py-16 md:px-16 xl:px-36 p-6"
           />
         </div>
       </div>
