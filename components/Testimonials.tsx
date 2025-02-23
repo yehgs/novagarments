@@ -34,7 +34,7 @@ const testimonials = [
     text: 'After disappointing experiences, I never thought I would go back to importing from Bangladesh. This team helped me rediscover the added value of this country, demonstrating great professionalism. Well done!',
   },
   {
-    name: 'From Franco (CEO of B-HOLDING)',
+    name: 'From Franco (CEO of B-Holster)',
     time: '( 29 Sep 2024 )',
     boldText: '"Flawless Inspection in the Netherlands"',
     text: 'I had the opportunity to inspect my product at their warehouse in the Netherlands. The experience was so well-organized that it felt like working in my usual environment, even though the material was still in a foreign state. Congratulation for the attention to detail and professionalism!',

@@ -68,6 +68,12 @@ export type PopUpSection = {
   text3: string;
 };
 
+export type PopUpSection2 = {
+  path1: string;
+  path2: string;
+  path3: string;
+};
+
 export type CookieSection = {
   text: string;
   btnText: string;
@@ -83,6 +89,7 @@ export type HomepageTranslate = {
   testimonialSection: Record<LanguageCode, TestimonialSection>;
   footerSection: Record<LanguageCode, FooterSection>;
   popUpSection: Record<LanguageCode, PopUpSection>;
+  popUpSection2: Record<LanguageCode, PopUpSection2>;
   cookieSection: Record<LanguageCode, CookieSection>;
 };
 
@@ -120,10 +127,10 @@ export const homepageTranslate: HomepageTranslate = {
     it: {
       slider1MainTxt:
         'Produzione Finanza Logistica tutto ciò che serve per far crescere la vostra attività.',
-      slider1SubMainTxt: 'Diamo voce alle vostre ambizioni internazionali!',
+      slider1SubMainTxt: 'Dove la collaborazione diventa risultato',
       slider2MainTxt: `Produzione per l’industria della moda`,
       slider2SubMainTxt: `Dove la collaborazione diventa risultato.`,
-      slider3MainTxt: `Produzione di abbigliamento da lavoro.`,
+      slider3MainTxt: `Produzione di Abbigliamento da lavoro`,
       slider3SubMainTxt: `Dove il networking alimenta il vostro business.`,
     },
   },
@@ -140,7 +147,7 @@ export const homepageTranslate: HomepageTranslate = {
     it: {
       sportTxt: `Produzione per l’industria dell’abbigliamneto Sportivo.`,
       promoTxt: `Produzioni di abbigliamento Promozionale.`,
-      beachTxt: `Produzioni di abbigliamento Sportivo.`,
+      beachTxt: `Produzione Abbigliamento Mare`,
       underwearTxt: `Produzione Underwear`,
       btnTxt: 'Scopri',
       bottomTxt: `NEL NOSTRO MONDO`,
@@ -227,6 +234,18 @@ export const homepageTranslate: HomepageTranslate = {
       list3: `Unicità assicurata: Personalizzazioni che rispecchiano la tua visione.`,
       text2: `Non aspettare, il tuo progetto è a un passo dal diventare realtà`,
       text3: `Contattaci oggi stesso per un preventivo su misura e dai vita al tuo progetto!`,
+    },
+  },
+  popUpSection2: {
+    uk: {
+      path1: '/pop1-min.jpg',
+      path2: '/pop2-min.jpg',
+      path3: '/pop3-min.jpg',
+    },
+    it: {
+      path1: '/pop1it-min.jpg',
+      path2: '/pop2it-min.jpg',
+      path3: '/pop3it-min.jpg',
     },
   },
   cookieSection: {

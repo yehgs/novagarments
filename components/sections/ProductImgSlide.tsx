@@ -59,12 +59,12 @@ const ProductImgSlide: React.FC<ProductImgSlideProps> = ({
         <h2 className="text-h3 font-bold text-center py-">{title}</h2>
         <div className="absolute top-1/2 transform -translate-y-1/2  flex justify-between w-full">
           <button className={`${type1} cursor-pointer`}>
-            <FaArrowLeft className="size-16" />
+            <FaArrowLeft className="size-6" />
           </button>
           <button className={`${type2} cursor-pointer`}>
             <FaArrowRight
               className="
-            size-16"
+            size-6"
             />
           </button>
         </div>

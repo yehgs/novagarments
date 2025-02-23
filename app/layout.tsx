@@ -8,6 +8,7 @@ import PageTransition from '@/components/PageTransition';
 import WhatsAppChat from '@/components/WhatsAppChat';
 import CookieNotification from '@/components/CookieNotification';
 import SubscriptionPopup from '@/components/SubscriptionPopup';
+import PopUpSlider from '@/components/PopUpSlider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -49,7 +50,8 @@ export default function RootLayout({
             <Footer />
             <WhatsAppChat />
             <CookieNotification />
-            <SubscriptionPopup />
+            <PopUpSlider />
+            {/* <SubscriptionPopup /> */}
           </PageTransition>
         </div>
       </body>

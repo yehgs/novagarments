@@ -16,7 +16,7 @@ const Production = () => {
         <div className="flex-1">
           <ProductionCard
             text={
-              homepageTranslate.productionSection[translation]?.beachTxt ||
+              homepageTranslate.productionSection[translation]?.sportTxt ||
               homepageTranslate.productionSection.uk.sportTxt
             }
             btnTxt={
