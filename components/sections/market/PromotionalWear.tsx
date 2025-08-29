@@ -78,7 +78,7 @@ const PromotionalWear = () => {
           </motion.span> */}
         </div>
       </section>
-      <PromoBrand />
+      {/* <PromoBrand /> */}
     </div>
   );
 };

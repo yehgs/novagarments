@@ -98,7 +98,7 @@ const UnderWear = () => {
           </div>
         </div>
       </section>
-      <FashionBrand />
+      {/* <FashionBrand /> */}
     </div>
   );
 };

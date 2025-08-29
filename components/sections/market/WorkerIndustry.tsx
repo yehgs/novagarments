@@ -110,7 +110,7 @@ const WorkerIndustry = () => {
           ></div>
         </div>
       </section>
-      <WorkWearBrand />
+      {/* <WorkWearBrand /> */}
     </div>
   );
 };

@@ -70,7 +70,7 @@ const SportWear = () => {
           </motion.span> */}
         </div>
       </section>
-      <SportswearBrands />
+      {/* <SportswearBrands /> */}
     </div>
   );
 };
