@@ -17,13 +17,14 @@ import { homepageTranslate } from '@/app/utils/translate';
 
 interface LanguageOptionProps {
   label: string;
-  value: 'uk' | 'it';
+  value: 'uk' | 'it' | 'nl';
   flag: string;
 }
 
 const languageOptions: LanguageOptionProps[] = [
   { label: 'UK', value: 'uk', flag: '/images/uk.svg' },
   { label: 'Italia', value: 'it', flag: '/images/italy.svg' },
+  { label: 'Nederland', value: 'nl', flag: '/images/netherlands.svg' },
 ];
 
 const NavBar: React.FC = () => {

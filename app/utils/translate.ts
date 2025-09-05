@@ -1,4 +1,4 @@
-export type LanguageCode = 'uk' | 'it';
+export type LanguageCode = 'uk' | 'it' | 'nl';
 
 //////Homepage
 export type HeaderSection = {
@@ -113,6 +113,15 @@ export const homepageTranslate: HomepageTranslate = {
       requestQuote: 'Richiedi un preventivo',
       contact: 'Contatti',
     },
+    nl: {
+      home: 'Home',
+      services: 'Diensten',
+      market: 'Markt',
+      support: 'Ondersteuning',
+      aboutUs: 'Over Ons',
+      requestQuote: 'Offerte Aanvragen',
+      contact: 'Contact',
+    },
   },
   sliderSection: {
     uk: {
@@ -128,10 +137,19 @@ export const homepageTranslate: HomepageTranslate = {
       slider1MainTxt:
         'Produzione Finanza Logistica tutto ciò che serve per far crescere la vostra attività.',
       slider1SubMainTxt: 'Dove la collaborazione diventa risultato',
-      slider2MainTxt: `Produzione per l’industria della moda`,
+      slider2MainTxt: `Produzione per l'industria della moda`,
       slider2SubMainTxt: `Dove la collaborazione diventa risultato.`,
       slider3MainTxt: `Produzione di Abbigliamento da lavoro`,
       slider3SubMainTxt: `Dove il networking alimenta il vostro business.`,
+    },
+    nl: {
+      slider1MainTxt:
+        'Productie Financiering Logistiek alles wat je nodig hebt om je bedrijf te laten groeien.',
+      slider1SubMainTxt: 'Laten we je internationale ambities waarmaken!',
+      slider2MainTxt: 'Mode-industrie Productie',
+      slider2SubMainTxt: 'Waar samenwerking resultaten oplevert.',
+      slider3MainTxt: 'Werkkleding Industrie Productie',
+      slider3SubMainTxt: 'Waar netwerken je bedrijf aandrijft.',
     },
   },
   productionSection: {
@@ -145,13 +163,22 @@ export const homepageTranslate: HomepageTranslate = {
       bottomSubTxt: 'every connection is an opportunity',
     },
     it: {
-      sportTxt: `Produzione per l’industria dell’abbigliamneto Sportivo.`,
+      sportTxt: `Produzione per l'industria dell'abbigliamneto Sportivo.`,
       promoTxt: `Produzioni di abbigliamento Promozionale.`,
       beachTxt: `Produzione Abbigliamento Mare`,
       underwearTxt: `Produzione Underwear`,
       btnTxt: 'Scopri',
       bottomTxt: `NEL NOSTRO MONDO`,
       bottomSubTxt: `ogni connessione è un'opportunità`,
+    },
+    nl: {
+      sportTxt: 'Sportkleding Productie',
+      promoTxt: 'Promotionele Kleding Productie',
+      beachTxt: 'Strandkleding Productie',
+      underwearTxt: 'Ondergoed Productie',
+      btnTxt: 'Meer',
+      bottomTxt: 'IN ONZE WERELD',
+      bottomSubTxt: 'is elke verbinding een kans',
     },
   },
   imageCardsSection: {
@@ -181,6 +208,20 @@ export const homepageTranslate: HomepageTranslate = {
       header4Txt: `Responsabilità diretta`,
       subTxt4: `Non siamo intermediari. Siamo il vostro unico interlocutore, pronto a risolvere qualsiasi problema con soluzioni rapide e affidabili.`,
     },
+    nl: {
+      header1Txt: 'Gevestigde ervaring',
+      subTxt1:
+        'Nova Garments Group, gevestigd in Amsterdam, is uw vertrouwde partner voor internationaal productie kledingbeheer met meer dan 20 jaar expertise in de Aziatische markt.',
+      header2Txt: 'Geïntegreerd management',
+      subTxt2:
+        'Van bemonstering tot levering bewaken wij elke stap om kwaliteit en tijdige levering te garanderen.',
+      header3Txt: 'Exclusief leveranciersnetwerk',
+      subTxt3:
+        'Wij werken alleen met gecertificeerde fabrikanten en garanderen hoge standaarden',
+      header4Txt: 'Directe verantwoordelijkheid',
+      subTxt4:
+        'Wij zijn geen tussenpersonen. Wij zijn uw enige aanspreekpunt, klaar om elk probleem op te lossen met snelle en betrouwbare oplossingen.',
+    },
   },
   certificateSection: {
     uk: {
@@ -189,6 +230,9 @@ export const homepageTranslate: HomepageTranslate = {
     it: {
       header: `Certificazioni`,
     },
+    nl: {
+      header: 'Certificaten',
+    },
   },
   testimonialSection: {
     uk: {
@@ -196,6 +240,9 @@ export const homepageTranslate: HomepageTranslate = {
     },
     it: {
       header: 'Testimonianze dei clienti',
+    },
+    nl: {
+      header: 'Klant Testimonials',
     },
   },
   customerSection: {
@@ -207,6 +254,10 @@ export const homepageTranslate: HomepageTranslate = {
       text: 'Customer-first',
       subText: `La vostra soddisfazione è il nostro obiettivo primario.`,
     },
+    nl: {
+      text: 'Klant-eerst',
+      subText: 'Uw tevredenheid is ons primaire doel.',
+    },
   },
   footerSection: {
     uk: {
@@ -214,6 +265,9 @@ export const homepageTranslate: HomepageTranslate = {
     },
     it: {
       text: 'PRODURRE IN MODO SICURO PER FAR CRESCERE IL  VOSTRO BUSINESS',
+    },
+    nl: {
+      text: 'PRODUCEER VEILIG EN LAAT JE BEDRIJF GROEIEN.',
     },
   },
   popUpSection: {
@@ -227,13 +281,22 @@ export const homepageTranslate: HomepageTranslate = {
       text3: `Contact us today for a custom quote and bring your project to life!`,
     },
     it: {
-      header: `Vestiamo le tue idee, in tempo record! Hai un progetto di customizzazione per capi d’abbigliamento?`,
+      header: `Vestiamo le tue idee, in tempo record! Hai un progetto di customizzazione per capi d'abbigliamento?`,
       text1: `Noi siamo il partner ideale per realizzarlo:`,
-      list1: `Minimi d’ordine ridotti: Perfetto per esigenze su misura.`,
+      list1: `Minimi d'ordine ridotti: Perfetto per esigenze su misura.`,
       list2: `Rapidità garantita: Produzione e consegna in tempi brevi.`,
       list3: `Unicità assicurata: Personalizzazioni che rispecchiano la tua visione.`,
       text2: `Non aspettare, il tuo progetto è a un passo dal diventare realtà`,
       text3: `Contattaci oggi stesso per un preventivo su misura e dai vita al tuo progetto!`,
+    },
+    nl: {
+      header: `Wij kleden je ideeën aan, in recordtijd! Heb je een maatwerk project voor kledingstukken?`,
+      text1: `Wij zijn de ideale partner om het werkelijkheid te maken:`,
+      list1: `Lage order minimums: Perfect voor maatwerk behoeften.`,
+      list2: `Gegarandeerde snelheid: Snelle productie en levering.`,
+      list3: `Uniekheid gegarandeerd: Aanpassingen die jouw visie weerspiegelen.`,
+      text2: `Wacht niet, jouw project is slechts één stap verwijderd van werkelijkheid worden.`,
+      text3: `Neem vandaag nog contact met ons op voor een maatwerk offerte en breng je project tot leven!`,
     },
   },
   popUpSection2: {
@@ -247,6 +310,11 @@ export const homepageTranslate: HomepageTranslate = {
       path2: '/pop2it-min.jpg',
       path3: '/pop3it-min.jpg',
     },
+    nl: {
+      path1: '/pop1nl-min.jpg',
+      path2: '/pop2nl-min.jpg',
+      path3: '/pop3nl-min.jpg',
+    },
   },
   cookieSection: {
     uk: {
@@ -256,6 +324,10 @@ export const homepageTranslate: HomepageTranslate = {
     it: {
       text: `Utilizziamo i cookie per migliorare la tua esperienza. Utilizzando il nostro sito, accetti il ​​nostro utilizzo dei cookie.`,
       btnText: `Accettare`,
+    },
+    nl: {
+      text: `Wij gebruiken cookies om uw ervaring te verbeteren. Door onze site te gebruiken, accepteert u ons gebruik van cookies.`,
+      btnText: `Accepteren`,
     },
   },
 };
@@ -293,6 +365,9 @@ export const servicePageTranslate: ServicePageTranslate = {
     it: {
       text: 'Finanza Produzione Logistica Spedizini.',
     },
+    nl: {
+      text: 'Financiering, Productie, Logistiek en Levering Naadloos.',
+    },
   },
   serviceSection: {
     uk: {
@@ -320,7 +395,7 @@ export const servicePageTranslate: ServicePageTranslate = {
       subTitle: `Potrete creare collezioni personalizzate e richiedere produzioni su misura, rimanendo connessi ai processi in ogni fase. Grazie alla nostra piattaforma integrata, avrete pieno controllo e visibilità su ogni dettaglio, dalla progettazione alla produzione`,
       title2: ` I VOSTRI TARGET IL NOSTRO OBIETTIVO`,
       subTitle2: `Accedete a fornitori selezionati e sfruttate le economie di scala per ottenere il miglior rapporto qualità-prezzo. Con noi risparmiate senza rinunciare alla qualità.`,
-      title3: `QUALITA’ GARANTITA CON AQL CONTROL`,
+      title3: `QUALITA' GARANTITA CON AQL CONTROL`,
       subTitle3: `Il nostro servizio di controllo qualità basato su AQL (Acceptance Quality Limit) è progettato per garantire che i vostri prodotti soddisfino i più elevati standard di qualità e conformità. Lavoriamo per garantire la massima soddisfazione del cliente, ridurre al minimo i difetti e ottimizzare i processi produttivi.`,
       title4: `SPEDIZIONI INTERNAZIONALI`,
       subTitle4: `Via mare, via aerea o SEA/AIR, scegliete la soluzione migliore per i vostri tempi e il vostro budget. Deposito doganale e fiscale: Eliminate i costi iniziali dell'IVA con il nostro magazzino autorizzato nei Paesi Bassi.
@@ -330,6 +405,26 @@ export const servicePageTranslate: ServicePageTranslate = {
 `,
       title6: `SERVIZI CUSTOMIZZATI`,
       subTitle6: `Il nostro servizio semplifica la gestione finanziaria della vostra azienda, garantendo che i vostri ordini vengano avviati rapidamente e senza ostacoli bancari. Forniamo supporto per snellire i flussi di pagamento, superare le complessità burocratiche e garantire la continuità operativa con soluzioni finanziarie flessibili`,
+    },
+    nl: {
+      title: 'COLLECTIE EN PRODUCTIE.',
+      subTitle:
+        'U kunt aangepaste collecties maken en op maat gemaakte producties aanvragen, waarbij u in elke fase verbonden blijft met de processen. Dankzij ons geïntegreerde platform heeft u volledige controle en zicht op elk detail, van ontwerp tot productie.',
+      title2: 'BEREIK UW STREEFPRIJS',
+      subTitle2:
+        'Toegang tot geselecteerde leveranciers en profiteer van schaalvoordelen om de beste prijs-kwaliteitverhouding te krijgen. Bij ons bespaart u geld zonder in te boeten op kwaliteit.',
+      title3: 'KWALITEIT GEGARANDEERD MET AQL',
+      subTitle3:
+        'Onze kwaliteitscontroledienst gebaseerd op AQL (Acceptance Quality Limit) is ontworpen om ervoor te zorgen dat uw producten voldoen aan de hoogste standaarden van kwaliteit en compliance. Wij werken om maximale klanttevredenheid te garanderen, defecten te minimaliseren en productieprocessen te optimaliseren.',
+      title4: 'INTERNATIONALE VRACHT',
+      subTitle4:
+        'Per zee, lucht of ZEE/LUCHT, kies de beste oplossing voor uw tijd en budget. Douane- en fiscale opslag: Elimineer voorschot kosten op BTW met ons fiscaal geautoriseerde magazijn in Nederland.',
+      title5: 'UW LEVERINGSDATUM',
+      subTitle5:
+        'Wij bieden een distributieservice in heel Europa en garanderen levering binnen 48 uur. Wij kunnen zendingen van alle grootten afhandelen, van enkele pakketten tot volledige ladingen, waarbij we optimale efficiëntie en punctualiteit garanderen. Vertrouw op ons voor een veilige en professionele service.',
+      title6: 'MAATWERK SERVICE',
+      subTitle6:
+        'Onze service vereenvoudigt het financiële beheer van uw bedrijf en zorgt ervoor dat uw orders snel en zonder bancaire obstakels worden gestart. Wij bieden ondersteuning om betalingsstromen te stroomlijnen, bureaucratische complexiteiten te overwinnen en operationele continuïteit te garanderen met flexibele financiële oplossingen.',
     },
   },
 };
@@ -404,6 +499,14 @@ export const marketPageTranslate: MarketPageTranslate = {
       text2: `Per una crescente richiesta di flessibilità per collezioni stagionali e capsule.`,
       boldTxt: `E per crescente necessità di una gestione integrata per ottimizzare i margini di profitto.`,
     },
+    nl: {
+      header: 'Wie Kiest Voor Ons',
+      text: 'Fabrikanten en importeurs van werk- en promotionele kleding, die op zoek zijn naar efficiënte en maatwerk oplossingen.',
+      text2:
+        'Groeiende vraag naar flexibiliteit voor seizoens- en capsule collecties',
+      boldTxt:
+        'Toenemende behoefte aan geïntegreerd management om winstmarges te optimaliseren.',
+    },
   },
   fashionSection: {
     uk: {
@@ -414,6 +517,10 @@ export const marketPageTranslate: MarketPageTranslate = {
       header: `Fashion`,
       text: `Collaboriamo con  marchi della moda uomo, donna ,bambino, dell'intimo, del tessile e delle spugne per la casa, dall'importatore alla grande distribuzione, cercano soluzioni efficienti e personalizzate.
 `,
+    },
+    nl: {
+      header: 'Mode',
+      text: 'Merken in heren-, dames- en kindermode, ondergoed, textiel en huishoudelijke sponzen, van importeur tot grote retailers, op zoek naar efficiënte en maatwerk oplossingen.',
     },
   },
   underwearSection: {
@@ -427,6 +534,11 @@ export const marketPageTranslate: MarketPageTranslate = {
 `,
       text1: `Qualita su misura per le`,
       text2: `vostre esigenze.`,
+    },
+    nl: {
+      text: 'Wij zijn een bedrijf gespecialiseerd in de productie van hoogwaardige ondergoed en strandkleding, ontworpen om te voldoen aan de specifieke behoeften van onze klanten. Elk stuk is het resultaat van een nauwgezet en collaboratief proces, waarbij de klant centraal staat: wij luisteren naar uw wensen en transformeren deze tot unieke producten die comfort, stijl en excellentie combineren.',
+      text1: 'Hoge kwaliteit, afgestemd op',
+      text2: 'uw behoeften.',
     },
   },
   workerSection: {
@@ -445,6 +557,16 @@ export const marketPageTranslate: MarketPageTranslate = {
       list3: `Studio e creazione di uniformi personalizzate.`,
       list4: `Prodotti ad alta visibilità, ignifughi, abbigliamento abbigliamento antistatico.`,
     },
+    nl: {
+      header: 'Werkkleding Industrie Productie',
+      list1:
+        'Consulting en analyse: Van het beheren van bedrijfsspecificaties tot aanbestedingen tot het aanpassen van productieprocessen.',
+      list2:
+        'Toenemende behoeften aan geïntegreerd management om winstmarges te optimaliseren.',
+      list3: 'Studie en Creatie van Maatwerk Uniformen.',
+      list4:
+        'Hoge Zichtbaarheid Producten, Brandvertragende, Antistatische Kleding',
+    },
   },
   promowearSection: {
     uk: {
@@ -455,6 +577,10 @@ export const marketPageTranslate: MarketPageTranslate = {
       header: `Promozionale`,
       text: `Con anni di esperienza nel settore, siamo specializzati nella produzione di abbigliamento promozionale che unisce stile, comfort e funzionalità. Che si tratti di eventi, branding aziendale o campagne promozionali, i nostri capi sono progettati per rappresentare il vostro marchio con distinzione e qualità.`,
     },
+    nl: {
+      header: 'Promotionele Kleding Productie',
+      text: 'Met jaren ervaring in de industrie specialiseren wij ons in de productie van promotionele kleding die stijl, comfort en functionaliteit combineert. Of het nu gaat om evenementen, corporate branding of promotionele campagnes, onze kledingstukken zijn ontworpen om uw merk te vertegenwoordigen met onderscheid en kwaliteit.',
+    },
   },
   sportwearSection: {
     uk: {
@@ -463,7 +589,11 @@ export const marketPageTranslate: MarketPageTranslate = {
     },
     it: {
       header: `Sportswear`,
-      text: `Siamo leader nella creazione di abbigliamento sportivo che unisce prestazioni, comfort e qualita’. Dalla corsa al fitness, dal calcio agli sport all'aria aperta, le nostre produzioni di abbigliamento sportivo sono realizzate per supportare ogni movimento e ispirare ogni atleta`,
+      text: `Siamo leader nella creazione di abbigliamento sportivo che unisce prestazioni, comfort e qualita'. Dalla corsa al fitness, dal calcio agli sport all'aria aperta, le nostre produzioni di abbigliamento sportivo sono realizzate per supportare ogni movimento e ispirare ogni atleta`,
+    },
+    nl: {
+      header: 'Sportkleding Productie',
+      text: 'Wij zijn leiders in het creëren van sportkleding die prestaties, comfort en geavanceerd ontwerp combineert. Van hardlopen tot fitness, van voetbal tot buitensporten, onze sportkleding producties zijn gemaakt om elke beweging te ondersteunen en elke atleet te inspireren',
     },
   },
   contactUsSection: {
@@ -478,6 +608,12 @@ export const marketPageTranslate: MarketPageTranslate = {
       text: `Scegliere di collaborare con Noi, significa avere al vostro fianco un interlocutore unico, esperto e affidabile, che vi affianca in ogni fase del processo produttivo e vi aiuta a superare le sfide dei mercati globali.`,
       boldText: `Produrre in sicurezza per far crescere il vostro business.`,
       buttonText: `Contattaci`,
+    },
+    nl: {
+      title: 'Wij zijn de ideale partner voor uw internationale producties',
+      text: 'Kiezen voor samenwerking met ons betekent dat u een unieke, ervaren en betrouwbare gesprekspartner aan uw zijde heeft, die u ondersteunt in elke fase van het productieproces en u helpt de uitdagingen van mondiale markten te overwinnen.',
+      boldText: 'Produceer veilig en laat uw bedrijf groeien.',
+      buttonText: 'Neem Contact Op',
     },
   },
 };
@@ -515,6 +651,10 @@ export const supportPageTranslate: SupportPageTranslate = {
       header: `Logistica integrata e consegne dedicate`,
       text: '',
     },
+    nl: {
+      header: 'Geïntegreerde Logistiek en toegewijde Leveringen',
+      text: '',
+    },
   },
   logisticsSection: {
     uk: {
@@ -541,6 +681,21 @@ export const supportPageTranslate: SupportPageTranslate = {
       subheader3: `Su richiesta, gestiamo anche la consegna diretta ai destinatari finali.`,
       header4: `Tracciabilità e trasparenza: `,
       subheader4: `Assicuriamo un controllo totale lungo l'intera catena di fornitura.`,
+    },
+    nl: {
+      title: 'Geïntegreerde Logistiek en Toegewijde Leveringen.',
+      header1: 'Europa-wijde FCL/LCL levering binnen 48 uur: ',
+      subheader1:
+        'Wij bieden snelle transittijden voor volledige zendingen (Full Container Load of Groupage).',
+      header2: 'Georganiseerde Wijdverspreide Distributie: ',
+      subheader2:
+        'Wij kunnen leveringen afhandelen van enkele pakketten tot grootschalige distributies.',
+      header3: 'Directe zendingen naar uw klanten: ',
+      subheader3:
+        'Op verzoek handelen wij ook de levering direct aan de eindontvangers af.',
+      header4: 'Traceerbaarheid en transparantie: ',
+      subheader4:
+        'Wij zorgen voor totale controle langs de gehele toeleveringsketen.',
     },
   },
 };
@@ -573,6 +728,15 @@ export const aboutPageTranslate: AboutPageTranslate = {
       text2: `Con una rete consolidata di partner strategici in `,
       boldtxt2: `Bangladesh e Pakistan`,
       text3: `, semplifichiamo ogni aspetto del processo produttivo, dalla gestione finanziaria alla logistica, fino allo sdoganamento. Grazie ai nostri agenti locali e alla nostra presenza capillare in tutta Europa, garantiamo un supporto costante, personalizzato e affidabile.`,
+    },
+    nl: {
+      boldtxt1: 'Nova Garments Group',
+      text1:
+        ', gevestigd in Amsterdam, is uw vertrouwde partner voor internationaal productiebeheer. Strategisch gelegen nabij de haven van Rotterdam en Schiphol International Airport, bieden wij innovatieve oplossingen voor bedrijven die wereldwijd willen uitbreiden zonder complicaties.',
+      text2: 'Met een gevestigd netwerk van strategische partners in',
+      boldtxt2: 'Bangladesh en Pakistan',
+      text3:
+        ', vereenvoudigen wij elk aspect van het productieproces - van financieel beheer tot logistiek tot douane-afhandeling. Dankzij onze lokale agenten en onze wijdverspreide aanwezigheid in heel Europa, garanderen wij constante gepersonaliseerde en betrouwbare ondersteuning.',
     },
   },
 };
@@ -635,6 +799,23 @@ export const contactUsTranslate: ContactUsTranslate = {
       email: `Email`,
       message: `Messaggio`,
       btnText: `Invia Richiesta`,
+    },
+    nl: {
+      contactName: 'Contactpersoon',
+      companyName: 'Bedrijfsnaam',
+      country: 'Land',
+      text: 'In welke kledingsector bent u geïnteresseerd?',
+      option1: 'Mode',
+      option2: 'Ondergoed',
+      option3: 'Strandkleding',
+      option4: 'Sportkleding',
+      option5: 'Promotionele Kleding',
+      option6: 'Werkkleding',
+      address: 'Adres',
+      phone: 'Telefoon',
+      email: 'E-mail',
+      message: 'Bericht',
+      btnText: 'Verzoek Versturen',
     },
   },
 };

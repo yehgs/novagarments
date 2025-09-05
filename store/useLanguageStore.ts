@@ -1,8 +1,8 @@
 import { create } from 'zustand';
 
 interface LanguageStoreProps {
-  translation: 'uk' | 'it';
-  setTranslation: (lang: 'uk' | 'it') => void;
+  translation: 'uk' | 'it' | 'nl';
+  setTranslation: (lang: 'uk' | 'it' | 'nl') => void;
   detectUserLanguage: () => Promise<void>;
 }
 
@@ -10,12 +10,13 @@ const useLanguageStore = create<LanguageStoreProps>((set) => ({
   // Initialize translation from localStorage or default to 'uk'
   translation:
     typeof window !== 'undefined'
-      ? (localStorage.getItem('selectedLanguage') as 'uk' | 'it') || 'uk'
+      ? (localStorage.getItem('selectedLanguage') as 'uk' | 'it' | 'nl') || 'uk'
       : 'uk',
 
   // Update translation in state and localStorage
-  setTranslation: (lang: 'uk' | 'it') => {
-    const validLang = lang === 'uk' || lang === 'it' ? lang : 'uk';
+  setTranslation: (lang: 'uk' | 'it' | 'nl') => {
+    const validLang =
+      lang === 'uk' || lang === 'it' || lang === 'nl' ? lang : 'uk';
     localStorage.setItem('selectedLanguage', validLang);
     set({ translation: validLang });
   },
@@ -30,7 +31,16 @@ const useLanguageStore = create<LanguageStoreProps>((set) => ({
 
       const res = await fetch('https://geolocation-db.com/json/');
       const data = await res.json();
-      const lang = data.country_code === 'IT' ? 'it' : 'uk';
+      let lang: 'uk' | 'it' | 'nl' = 'uk';
+
+      if (data.country_code === 'IT') {
+        lang = 'it';
+      } else if (data.country_code === 'NL') {
+        lang = 'nl';
+      } else {
+        lang = 'uk';
+      }
+
       localStorage.setItem('selectedLanguage', lang);
       set({ translation: lang });
     } catch (error) {
