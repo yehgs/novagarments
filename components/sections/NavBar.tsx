@@ -67,12 +67,12 @@ const NavBar: React.FC = () => {
         homepageTranslate.headerSection.uk.support,
       path: '/support',
     },
-    {
-      name:
-        homepageTranslate.headerSection[translation]?.aboutUs ||
-        homepageTranslate.headerSection.uk.aboutUs,
-      path: '/about',
-    },
+    // {
+    //   name:
+    //     homepageTranslate.headerSection[translation]?.aboutUs ||
+    //     homepageTranslate.headerSection.uk.aboutUs,
+    //   path: '/about',
+    // },
   ];
 
   const toggleMenu = () => setMenu((prev) => !prev);
@@ -96,9 +96,8 @@ const NavBar: React.FC = () => {
               <Link
                 key={link.path}
                 href={link.path}
-                className={`transition-all duration-300 ${
-                  link.path === pathname ? 'text-accent' : 'text-gray'
-                } hover:text-accent`}
+                className={`transition-all duration-300 ${link.path === pathname ? 'text-accent' : 'text-gray'
+                  } hover:text-accent`}
               >
                 {link.name}
               </Link>
@@ -180,9 +179,8 @@ const NavBar: React.FC = () => {
                   <Link
                     key={link.path}
                     href={link.path}
-                    className={`transition-all duration-300 ${
-                      link.path === pathname ? 'text-accent' : 'text-gray'
-                    } hover:text-accent`}
+                    className={`transition-all duration-300 ${link.path === pathname ? 'text-accent' : 'text-gray'
+                      } hover:text-accent`}
                     onClick={toggleMenu}
                   >
                     {link.name}

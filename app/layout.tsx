@@ -50,7 +50,7 @@ export default function RootLayout({
             <Footer />
             <WhatsAppChat />
             <CookieNotification />
-            <PopUpSlider />
+            {/* <PopUpSlider /> */}
             {/* <SubscriptionPopup /> */}
           </PageTransition>
         </div>

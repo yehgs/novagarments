@@ -6,8 +6,8 @@ import React from 'react';
 const About = () => {
   return (
     <div className="w-[100vw]">
-      <AboutHero />
-      <AboutImageCards />
+      {/* <AboutHero />
+      <AboutImageCards /> */}
       <ContactSection />
     </div>
   );
