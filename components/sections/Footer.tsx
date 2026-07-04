@@ -1,10 +1,10 @@
-'use client';
-import HeaderText from '../HeaderText';
-import Link from 'next/link';
-import Image from 'next/image';
-import useLanguageStore from '@/store/useLanguageStore';
-import { homepageTranslate } from '@/app/utils/translate';
-import { useEffect } from 'react';
+"use client";
+import HeaderText from "../HeaderText";
+import Link from "next/link";
+import Image from "next/image";
+import useLanguageStore from "@/store/useLanguageStore";
+import { homepageTranslate } from "@/app/utils/translate";
+import { useEffect } from "react";
 
 const Footer = () => {
   const { translation, detectUserLanguage } = useLanguageStore();
@@ -18,25 +18,25 @@ const Footer = () => {
       name:
         homepageTranslate.headerSection[translation]?.home ||
         homepageTranslate.headerSection.uk.home,
-      path: '/',
+      path: "/",
     },
     {
       name:
         homepageTranslate.headerSection[translation]?.services ||
         homepageTranslate.headerSection.uk.services,
-      path: '/services',
+      path: "/services",
     },
     {
       name:
         homepageTranslate.headerSection[translation]?.market ||
         homepageTranslate.headerSection.uk.market,
-      path: '/market',
+      path: "/market",
     },
     {
       name:
         homepageTranslate.headerSection[translation]?.support ||
         homepageTranslate.headerSection.uk.support,
-      path: '/support',
+      path: "/support",
     },
   ];
   const footerLink2 = [
@@ -44,16 +44,16 @@ const Footer = () => {
       name:
         homepageTranslate.headerSection[translation]?.aboutUs ||
         homepageTranslate.headerSection.uk.aboutUs,
-      path: '/about',
+      path: "/about",
     },
-    { name: 'FAQ', path: '/faq' },
-    { name: 'Policy & Privacy', path: '/policy' },
-    { name: 'Terms and Conditions', path: '/terms' },
+    { name: "FAQ", path: "/faq" },
+    { name: "Policy & Privacy", path: "/policy" },
+    { name: "Terms and Conditions", path: "/terms" },
   ];
   const footerLink3 = [
-    { name: 'POLICY & PRIVACY', path: '/policy' },
-    { name: 'FAQ', path: '/faq' },
-    { name: 'Terms and Conditions', path: '/terms' },
+    { name: "POLICY & PRIVACY", path: "/policy" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Terms and Conditions", path: "/terms" },
   ];
 
   return (
@@ -108,12 +108,12 @@ const Footer = () => {
           </p>
           <div className="text-base font-light">
             <a
-              href="mailto:info@novagarments.com"
+              href="mailto:info@novagarments.net"
               className="hover:text-accent hover:font-normal transition-all duration-300 lg:text-xl text-base"
             >
-              info@novagarments.com
+              info@novagarments.net
             </a>
-            <p>novagarments.com</p>
+            <p>novagarments.net</p>
           </div>
         </div>
       </div>

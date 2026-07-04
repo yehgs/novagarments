@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const PrivacyPolicy = () => {
   return (
@@ -10,8 +10,8 @@ const PrivacyPolicy = () => {
         This Privacy Policy outlines how Nova Garment BV (“we,” “our,” or “us”)
         collects, uses, and protects your personal data when you visit our
         website (
-        <a href="https://novagarments.com" className="text-blue-600 underline">
-          novagarments.com
+        <a href="https://novagarments.net" className="text-blue-600 underline">
+          novagarments.net
         </a>
         ) or engage with our services. By using our website, you agree to the
         terms of this Privacy Policy.
@@ -118,12 +118,12 @@ const PrivacyPolicy = () => {
           </li>
         </ul>
         <p className="text-gray-700">
-          To exercise your rights, please contact us at{' '}
+          To exercise your rights, please contact us at{" "}
           <a
-            href="mailto:info@novagarments.com"
+            href="mailto:info@novagarments.net"
             className="text-blue-600 underline"
           >
-            info@novagarments.com
+            info@novagarments.net
           </a>
           .
         </p>
@@ -138,7 +138,7 @@ const PrivacyPolicy = () => {
           We use cookies and similar tracking technologies to enhance your
           browsing experience, analyze website usage, and deliver personalized
           content. By using our website, you consent to the use of cookies as
-          described in our{' '}
+          described in our{" "}
           <a href="/cookie-policy" className="text-blue-600 underline">
             Cookie Policy
           </a>
@@ -186,10 +186,10 @@ const PrivacyPolicy = () => {
           <br />
           Email:
           <a
-            href="mailto:info@novagarments.com"
+            href="mailto:info@novagarments.net"
             className="text-blue-600 underline"
           >
-            info@novagarments.com
+            info@novagarments.net
           </a>
         </address>
       </section>
